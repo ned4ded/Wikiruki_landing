@@ -177,7 +177,7 @@
 /* Common section */
 
 body {
-  background-color: lightgrey;
+  background-color: white;
 }
 
 .c-landing__main {
@@ -454,6 +454,41 @@ body {
 .multi-slider__btn-right:active,
 .multi-slider__btn-left:active {
   background-color: var(--c-landing-active);
+}
+
+.single-slider {
+  position: relative;
+  text-align: center;
+}
+
+.single-slider__btn {
+  display: inline-block;
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0);
+  border: solid 1px var(--c-landing-highlight);
+  padding: 0;
+}
+
+.single-slider__btn:hover {
+  background-color: var(--c-landing-highlight);
+	border: 2px solid white;
+}
+
+.single-slider__btn:active {
+  background-color: var(--c-landing-active);
+  border: solid 2px var(--c-landing-active);
+}
+
+
+.single-slider__btn--active,
+.single-slider__btn--active:hover,
+.single-slider__btn--active:active {
+  background-color: var(--c-landing-highlight);
+  border: solid 1px var(--c-landing-highlight);
+  cursor: default; 
 }
 
 /* End of common section */
@@ -887,12 +922,22 @@ body {
 
 .staff {
   padding-top: 80px;
-  padding-bottom: 168px;
+  padding-bottom: 181px;
   background-color: var(--c-landing-semi-bg-color);
+  position: relative;
+  z-index: 0;
+  padding-right: 193px;
+  padding-left: 245px;
 }
 
 .staff__heading {
   margin-bottom: 19px;
+}
+
+/* Specific block markup */
+.staff__paragraph,
+.staff__heading {
+  margin-left: -26px;
 }
 
 .staff__heading::after {
@@ -903,12 +948,14 @@ body {
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  margin-bottom: 79px;
+  margin-bottom: 99px;
 }
 
 .personal-card__img-wrapper {
   position: relative;
   width: 199px;
+  margin-bottom: 13px;
+  z-index: 1;
 }
 
 .personal-card__link-list {
@@ -939,6 +986,56 @@ body {
   font-size: 0;
   position: absolute;
   top: 0;
+}
+
+.personal-card__img-wrapper::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 28px;
+  width: 201px;
+  height: 293px;
+  border: solid 1px var(--c-landing-highlight);
+  z-index: -1;
+}
+
+.personal-card__img-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -29px;
+  left: 28px;
+  width: 160px;
+  height: 1px;
+  border: solid 1px var(--c-landing-semi-bg-color);
+  z-index: -1;
+}
+
+.personal-card__name {
+  position: relative;
+  z-index: 1;
+  left: 40px;
+}
+
+.personal-card__text {
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 25px;
+  margin-left: -16px;
+}
+
+.staff .multi-slider__btn-right,
+.staff .multi-slider__btn-left {
+  top: 101px;
+}
+
+.staff .multi-slider__btn-right {
+  right: -32px;
+}
+
+.staff .multi-slider__btn-left {
+  left: -80px;
 }
 
 /* End of staff block */
