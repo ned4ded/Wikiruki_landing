@@ -1444,6 +1444,7 @@ so to undo custom designing of centration comment icon section above */
   .staff {
     padding-right: 50px;
     padding-left: 50px;
+    padding-bottom: 75px;
   }
 
   .staff .multi-slider__btn-left {
@@ -1498,32 +1499,38 @@ so to undo custom designing of centration comment icon section above */
 /* Begin of User-role-block section */
 
 .user-role {
-  padding-top: 90px;
-  padding-bottom: 165px;
-  background: var(--c-landing-bg-placeholder-color) url(../img/role-choice-bg.png) no-repeat bottom;
   position: relative;
 
+  padding-top: 90px;
+  padding-bottom: 165px;
+
+  background: var(--c-landing-bg-placeholder-color) url(../img/role-choice-bg.png) no-repeat bottom;
   /* to avoid adding another div and dimming the background a little */
-  box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
 }
 
 .user-role__block {
   max-width: 1032px;
+
   background-color: var(--c-landing-semi-bg-color);
   border-radius: 4px;
-  box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.2);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.2);
+          box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.2);
 }
 
 .user-role__heading {
   --user-role-heading-p-b: 50px;
 
-  font-size: 24px;
-  line-height: 46px;
   position: relative;
   z-index: 0;
+
+  margin-bottom: 50px;
   padding-top: 32px;
   padding-bottom: var(--user-role-heading-p-b);
-  margin-bottom: 50px;
+
+  font-size: 24px;
+  line-height: 46px;
 }
 
 .user-role__heading::after {
@@ -1533,19 +1540,23 @@ so to undo custom designing of centration comment icon section above */
 .user-role__heading::before {
   content: "";
   position: absolute;
-  display: block;
   top: 0;
   left: 0;
+  z-index: -1;
+
+  display: block;
   width: 100%;
   height: 100%;
+
   background-color: var(--c-landing-main-bg-color);
-  box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
-  z-index: -1;
   border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
+          box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
 }
 
 .user-role__block-content {
   margin-bottom: 50px;
+
   text-align: center;
 }
 
@@ -1554,49 +1565,55 @@ so to undo custom designing of centration comment icon section above */
   position: absolute;
   top: 0;
   right: 0;
+
   display: block;
   width: 1px;
   height: 100%;
+
   background-color: #e3e3e3;
 }
 
 .user-role__content-heading {
+  margin-bottom: 33px;
+
   font-size: 32px;
   line-height: 46px;
-  margin-bottom: 33px;
   text-transform: capitalize;
-  font-size: 32px;
 }
 
 .user-role__list {
-  padding-left: 200px;
   margin: 0 0 52px;
+  padding-left: 200px;
+
   list-style: none;
 }
 
 .user-role__item {
-  color: var(--c-landing-main-color-8);
-  line-height: 32px;
-  font-size: 18px;
-  text-align: left;
   position: relative;
+
+  font-size: 18px;
+  line-height: 32px;
+  text-align: left;
+  color: var(--c-landing-main-color-8);
 }
 
 .user-role__item::after {
   content: "";
-  display: block;
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  background-color: var(--c-landing-main-color-8);
   position: absolute;
   top: calc(50% - 2px);
   left: -30px;
+
+  display: block;
+  width: 5px;
+  height: 5px;
+
+  background-color: var(--c-landing-main-color-8);
+  border-radius: 50%;
 }
 
 .user-role__btn {
+  width: 250px;
   margin-bottom: 19px;
-  width: 243px;
 }
 
 .user-role__btn.c-icon-rock-hand::after {
@@ -1606,6 +1623,29 @@ so to undo custom designing of centration comment icon section above */
 .user-role__btn.c-icon-pointer-hand::after {
   left: 22px;
 }
+
+@media (max-width: 1199px) {
+  .user-role {
+    padding-bottom: 90px;
+  }
+
+  .user-role__list {
+    padding-left: 175px;
+  }
+}
+
+@media (max-width: 991px) {
+  .user-role__list {
+    padding-left: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .user-role__list {
+    padding-left: 100px;
+  }
+}
+
 
 /* End of User-role-block section */
 
@@ -1666,6 +1706,54 @@ so to undo custom designing of centration comment icon section above */
 
 .service-content__slider .multi-slider__btn-left {
   left: -59px;
+}
+
+@media (max-width: 1499px) {
+  .service-content__slider .multi-slider__item--active:not(.multi-slider__item--active-single) {
+    display: none;
+  }
+
+  .service-content__slider .multi-slider__item {
+    width: 100%;
+  }
+
+  .service-content__slider .multi-slider__btn-right {
+    right: 250px;
+  }
+
+  .service-content__slider .multi-slider__btn-left {
+    left: 250px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .service-content__slider .multi-slider__btn-right {
+    right: 150px;
+  }
+
+  .service-content__slider .multi-slider__btn-left {
+    left: 150px;
+  }
+}
+
+@media (max-width: 991px) {
+  .service-content__slider .multi-slider__btn-right {
+    right: 50px;
+  }
+
+  .service-content__slider .multi-slider__btn-left {
+    left: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-content__slider .multi-slider__btn-right {
+    right: 25px;
+  }
+
+  .service-content__slider .multi-slider__btn-left {
+    left: 25px;
+  }
 }
 
 /* End of Service-content-block section */
