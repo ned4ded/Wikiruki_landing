@@ -1,6 +1,6 @@
 /* Begin of Import section */
 
-@import url('https://fonts.googleapis.com/css?family=Arvo|Lato:400,700,900|Open+Sans:300,400,600,700|Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Lato:400,700,900|Open+Sans:300,400,600,700|Roboto:300,400,500,700');
 
 /* End of Import Section */
 
@@ -26,7 +26,7 @@
   --gift-card-highlight: #0901df;
 
   /* Fonts, use it with font: */
-  --arvo: 'Arvo', serif;
+  --roboto-slab: 'Roboto Slab', serif;
   --lato: 'Lato', sans-serif;
   --open-sans: 'Open Sans', sans-serif;
   --roboto: 'Roboto', sans-serif;
@@ -56,11 +56,6 @@ body {
   font-family: var(--open-sans);
 
   background-color: white;
-}
-
-/* Used only for hiding semantic valuable but not provided by design elements */
-.hidden {
-  display: none;
 }
 
 .c-landing__main {
@@ -102,12 +97,12 @@ body {
   margin-top: -10px;
   margin-bottom: 36px;
 
-  font-weight: 300;
+  font-weight: 400;
   font-size: 48px;
   line-height: 65px;
+  font-family: var(--open-sans);
   text-align: left;
   color: var(--c-landing-h1-color);
-  font-style: var(--open-sans);
 }
 
 .c-landing__annotation {
@@ -115,7 +110,7 @@ body {
   top: -75px;
   left: 15px;
 
-  width: 100%;
+  width: 150%;
 
   font-size: 16px;
   line-height: 100%;
@@ -157,12 +152,13 @@ body {
 
   font-size: 20px;
   line-height: 100%;
-  font-family: var(--arvo);
+  font-family: var(--roboto-slab);
   color: var(--c-landing-h3-color);
   text-transform: uppercase;
 }
 
 .c-landing__text-logo {
+  font-weight: 600;
   color: var(--c-landing-highlight);
 }
 
@@ -300,6 +296,22 @@ body {
 
 .c-landing-icon-lg-write::after {
   background-position: -100px -208px;
+}
+
+.c-landing-icon-like::after {
+  background-position: -44px 0;
+}
+
+.c-landing-icon-dislike::after {
+  background-position: -110px 0;
+}
+
+.c-landing-icon-comment::after {
+  background-position: -66px 0;
+}
+
+.c-landing-icon-visibility::after {
+  background-position: -88px 0;
 }
 
 /* End of icons section */
@@ -548,7 +560,7 @@ body {
 
 /* End of Common section */
 
-/* Begin of Bootstrap styles reworking */
+/* Begin of Common Bootstrap styles reworking */
 
 @media (min-width: 1500px) {
   .container {
@@ -576,7 +588,182 @@ body {
   }
 }
 
-/* End of Bootstrap styles reworking */
+/* End of Common Bootstrap styles reworking */
+
+/* Begin of Instruction section */
+
+.instruction {
+  width: 350px;
+
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.instruction__image {
+  border-radius: 2px 2px 0 0;
+}
+
+.instruction__heading,
+.instruction__author,
+.instruction__text {
+  margin: 16px;
+
+  font-family: var(--roboto);
+  color: var(--c-landing-instruction-main-color);
+}
+
+.instruction__heading {
+  font-size: 22px;
+  line-height: 136%;
+}
+
+.instruction__author {
+  display: block;
+  font-size: 14px;
+}
+
+.instruction__text {
+  font-family: var(--roboto);
+  font-weight: 300;
+  line-height: 22px;
+}
+
+.instruction__social,
+.instruction__social tbody,
+.instruction__social tbody tr {
+  display: block;
+}
+
+.instruction__social {
+  margin: 5px 16px 0;
+  padding: 18px 0 20px;
+}
+
+.instruction__icon {
+  position: relative;
+
+  display: inline-block;
+  height: 26px;
+  margin-left: 16px;
+  padding: 0 0 0 32px;
+
+  font-weight: 700;
+  line-height: 26px;
+  font-family: var(--roboto);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.instruction__icon:first-of-type {
+  margin: 0;
+}
+
+/* Icons located in sprite.png are exactly centered,
+so to undo custom designing of centration comment icon section above */
+
+.instruction__icon.c-landing-icon-like::after {
+  top: -2px;
+}
+
+.instruction__icon.c-landing-icon-dislike::after {
+  top: 4px;
+}
+
+.instruction__icon.c-landing-icon-comment::after {
+  top: 2px;
+}
+
+.instruction__curiosity-link {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  padding: 18px 16px 18px;
+
+  font-weight: 500;
+  font-family: var(--roboto);
+  color: var(--c-landing-highlight);
+
+  border-radius: 0 0 2px 2px;
+  cursor: pointer;
+}
+
+.instruction__curiosity-link:hover,
+.instruction__curiosity-link:focus:hover {
+  color: var(--c-landing-main-bg-color);
+  text-decoration: none;
+
+  background-color: var(--c-landing-highlight);
+}
+
+.instruction__curiosity-link:active,
+.instruction__curiosity-link:focus:active {
+  color: var(--c-landing-main-bg-color);
+  text-decoration: none;
+
+  background-color: var(--c-landing-active);
+}
+
+.instruction--backwords {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.6;
+}
+
+.instruction__separate-line {
+  position: relative;
+}
+
+.instruction__separate-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--c-landing-muted-color-2);
+}
+
+/* End of Instraction section */
+
+/* Begin of Category-list section */
+
+.category-list {
+  margin: 16px;
+
+  text-align: left;
+}
+
+.category-list > li {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.category-list__heading,
+.category-list__name {
+  font-size: 14px;
+  font-family: var(--roboto);
+  text-align: left;
+}
+
+.category-list__heading {
+  color: var(--c-landing-instruction-main-color);
+  padding-right: 22px;
+  margin: 0;
+}
+
+.category-list__name {
+  padding-right: 16px;
+
+  text-align: left;
+  color: var(--c-landing-muted-color-5);
+}
+
+/* End of category-list section */
 
 /* Begin of Header-block section */
 
@@ -651,7 +838,6 @@ body {
   opacity: 0.3;
 }
 
-
 /* End of Bootstrap Navigation rework */
 
 .c-landing__header {
@@ -695,7 +881,40 @@ body {
 
 /* Begin Responsive Menu */
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  /* Block is for regulation of menu shrinking width,
+  default: 768px,
+  Comment this block if you want to change collapsing response width */
+  .navbar-header {
+    float: none;
+  }
+
+  .navbar-nav {
+    float: none;
+  }
+
+  .navbar-right {
+    float: none !important;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+
+  .navbar-nav > li {
+    float: none;
+  }
+
+  .collapse.in {
+    display: block !important;
+  }
+
+  /* End of Collapsing response width */
+
   .menu {
   margin: 0;
   padding: 0;
@@ -736,23 +955,24 @@ body {
 /* Begin of Main-info section  */
 
 .main-info {
-  min-height: 890px;
-  background: var(--c-landing-bg-placeholder-color) url(../img/advantage-bg.png) no-repeat top left;
-  padding-top: 158px;
   position: relative;
-
   z-index: 0;
+
+  padding-top: 158px;
+  padding-bottom: 225px;
+
+  background: var(--c-landing-bg-placeholder-color) url(../img/advantage-bg.png) no-repeat top left;
 }
 
-.main-info__block {
+.main-info__instruction-wrapper {
   position: relative;
 }
 
-.main-info__first-paragraph {
+.main-info__block .c-landing__main-text {
   margin-bottom: 30px;
 }
 
-.main-info__last-paragraph {
+.main-info__block .c-landing__main-text:last-of-type {
   margin-top: 54px;
   margin-bottom: 33px;
 }
@@ -765,7 +985,6 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-
   z-index: -1;
 }
 
@@ -779,202 +998,72 @@ body {
 }
 
 .main-info__btn.c-empty-btn {
-  padding-left: 28px;
-  padding-right: 28px;
   margin-right: 23px;
+  padding-right: 28px;
+  padding-left: 28px;
 }
 
-@media (max-width: 767px) {
-  .main-info__instruction.instruction--backwords {
-    display: none;
+@media (max-width: 1499px) {
+  .main-info {
+    padding-bottom: 205px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .main-info__instruction.instruction {
-    margin: 0;
-    float: left;
+@media (max-width: 1199px) {
+  .main-info {
+    padding-bottom: 30px;
+
+    background-position: top left;
   }
 
-  .main-info__instruction.instruction--backwords {
-    position: relative;
-    opacity: 1;
-    transform: scale(1);
-    float: right;
+  .main-info__block .c-landing__main-text:last-of-type {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  .main-info__btn {
+    margin-bottom: 15px;
+  }
+
+  .main-info__btn.c-empty-btn {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-info {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    padding-top: 95px;
+    padding-bottom: 30px;
+
+    background-position: 25% 25%;
+  }
+
+  .c-landing__heading {
+    margin-bottom: 30px;
+  }
+
+  .c-landing__annotation {
+    position: static;
+
+    width: 100%;
+    margin-bottom: 30px;
+
+    line-height: 140%;
   }
 }
 
 /* End of main-info section */
 
-/* Begin of Category-list section */
-
-.category-list {
-  margin: 16px;
-  text-align: left;
-}
-
-.category-list > li {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.category-list__heading,
-.category-list__name {
-  font-family: var(--roboto);
-  font-size: 14px;
-  text-align: left;
-}
-
-.category-list__heading {
-  color: var(--c-landing-instruction-main-color);
-  padding-right: 22px;
-  margin: 0;
-}
-
-.category-list__name {
-  color: var(--c-landing-muted-color-5);
-  padding-right: 16px;
-  text-align: left;
-}
-
-/* End of category-list section */
-
-/* Begin of Instruction section */
-
-.instruction {
-  width: 350px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-}
-
-.instruction__image {
-  border-radius: 2px 2px 0 0;
-}
-
-.instruction__heading,
-.instruction__author,
-.instruction__text {
-  font-family: var(--roboto);
-  color: var(--c-landing-instruction-main-color);
-  margin: 16px;
-}
-
-.instruction__heading {
-  font-size: 22px;
-  line-height: 136%;
-}
-
-.instruction__author {
-  display: block;
-  font-size: 14px;
-}
-
-.instruction__text {
-  font: var(--roboto-light);
-  line-height: 157%;
-}
-
-.instruction__social,
-.instruction__social tbody,
-.instruction__social tbody tr {
-  display: block;
-}
-
-.instruction__social {
-  margin: 5px 16px 0;
-  padding: 18px 0 20px;
-}
-
-.instruction__icon {
-  position: relative;
-  display: inline-block;
-  font: var(--roboto-bold);
-  color: rgba(0, 0, 0, 0.7);
-  padding: 0 0 0 32px;
-  margin-left: 16px;
-  height: 26px;
-  line-height: 26px;
-}
-
-.instruction__icon:first-of-type {
-  margin: 0;
-}
-
-.instruction__curiosity-link {
-  display: block;
-  padding: 18px 16px 18px;
-  width: 100%;
-  position: relative;
-  font: var(--roboto-medium);
-  color: var(--c-landing-highlight);
-  border-radius: 0 0 2px 2px;
-  cursor: pointer;
-}
-
-.instruction__curiosity-link:hover,
-.instruction__curiosity-link:focus:hover {
-  background-color: var(--c-landing-highlight);
-  color: var(--c-landing-main-bg-color);
-  text-decoration: none;
-}
-
-.instruction__curiosity-link:active,
-.instruction__curiosity-link:focus:active {
-  background-color: var(--c-landing-active);
-  color: var(--c-landing-main-bg-color);
-  text-decoration: none;
-}
-
-
-
-/* Icons located in sprite.png are exactly centered, so to undo custom designing of centration change Y (in background-position: x y;) to 0 */
-
-.c-landing-icon-like::after {
-  background-position: -44px -2px;
-}
-
-.c-landing-icon-dislike::after {
-  background-position: -110px 4px;
-}
-
-.c-landing-icon-comment::after {
-  background-position: -66px 2px;
-}
-
-.c-landing-icon-visibility::after {
-  background-position: -88px 0;
-}
-
-.instruction--backwords {
-  transform: scale(0.8);
-  opacity: 0.6;
-}
-
-.instruction__separate-line {
-  position: relative;
-}
-
-.instruction__separate-line::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: var(--c-landing-muted-color-2);
-}
-
-/* End of Instraction section */
-
 /* Begin of Cons-block section */
 
 .cons {
-  background-color: var(--c-landing-main-bg-color);
+  margin-bottom: 0;
   padding-top: 80px;
   padding-bottom: 38px;
-  margin-bottom: 0;
+
+  background-color: var(--c-landing-main-bg-color);
 }
 
 .cons__item {
@@ -986,9 +1075,26 @@ body {
 }
 
 .cons__text {
-  color: var(--c-landing-main-color-9);
   font-size: 18px;
   line-height: 24px;
+  color: var(--c-landing-main-color-9);
+}
+
+@media (max-width: 1199px) {
+  .cons {
+    padding-top: 45px;
+    padding-bottom: 0;
+  }
+
+  .cons__heading {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .cons {
+    padding-top: 25px;
+  }
 }
 
 /* End of Cons-block section */
@@ -996,10 +1102,11 @@ body {
 /* Begin of Features-block section */
 
 .features {
+  margin-bottom: 0;
   padding-top: 61px;
   padding-bottom: 101px;
+
   background-color: var(--c-landing-semi-bg-color);
-  margin-bottom: 0;
 }
 
 .features__heading {
@@ -1007,26 +1114,61 @@ body {
 }
 
 .features__item {
-  padding-top: 120px;
-  margin-bottom: 20px;
   position: relative;
+
+  margin-bottom: 20px;
+  padding-top: 120px;
 }
 
 .features__item-heading {
-  font-family: var(--arvo);
-  font-size: 20px;
-  line-height: 24px;
-  text-align: center;
-  color: var(--c-landing-highlight);
   margin-top: 0;
   margin-bottom: 19px;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-family: var(--roboto-slab);
+  text-align: center;
+  color: var(--c-landing-highlight);
 }
 
 .features__item-text {
   font-size: 16px;
   line-height: 24px;
-  color: var(--c-landing-main-color-9);
   text-align: center;
+  color: var(--c-landing-main-color-9);
+}
+
+@media (max-width: 991px) {
+  .features {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .features__heading {
+    margin-bottom: 5px;
+  }
+
+  .features__item {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features__item {
+    width: 100%;
+    margin: 35px 0;
+    padding-top: 0;
+    padding-left: 140px;
+  }
+
+  .features__item > * {
+    text-align: left;
+  }
+
+  .features .c-landing-icon-lg::after {
+    top: calc(50% - calc(var(--c-lg-icons-height) / 2));
+    left: 15px;
+  }
 }
 
 /* End of Features-block section */

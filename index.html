@@ -34,13 +34,13 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
       <ul class="menu nav navbar-nav navbar-right">
-        <li><a class="menu__item menu__item--active">О нас</a></li>
+        <li><a href="#main-info" class="menu__item menu__item--active">О нас</a></li>
         <li><a href="#agitation" class="menu__item">Смысл</a></li>
-        <li><a href="#" class="menu__item">Мастера</a></li>
-        <li><a href="#" class="menu__item">Кто ты?</a></li>
-        <li><a href="#" class="menu__item">Отзывы</a></li>
-        <li><a href="#" class="menu__item">Миссия</a></li>
-        <li><a href="#" class="menu__item">Контакты</a></li>
+        <li><a href="#staff" class="menu__item">Мастера</a></li>
+        <li><a href="#user-role" class="menu__item">Кто ты?</a></li>
+        <li><a href="#user-reviews" class="menu__item">Отзывы</a></li>
+        <li><a href="#tasks" class="menu__item">Миссия</a></li>
+        <li><a href="#contacts" class="menu__item">Контакты</a></li>
       </ul>
     </div>
 
@@ -49,26 +49,26 @@
 
 </header>
   <main class="c-landing__main container" role="main">
-    <div class="main-info row">
-      <div class="col-xs-12 col-md-6">
+    <div id="main-info" class="main-info row">
+      <div class="main-info__block col-xs-12 col-md-6">
         <p class="c-landing__annotation">Энциклопедия практических знаний – помощь в решении повседневных задач</p>
         <h1 class="c-landing__heading">Добро пожаловать на <span class="c-landing__text-logo">WikiRuki</span></h1>
         <section>
           <h2 class="hidden">О нас</h2>
-          <p class="c-landing__main-text main-info__first-paragraph">
+          <p class="c-landing__main-text">
             Целью создания этого интернет-портала является желание помочь обычным пользователям, таким как вы, ваши друзья или родственники, решать повседневные, бытовые задачи.
           </p>
           <p class="c-landing__main-text">
             На WikiRuki мастера делятся своим опытом, рассказывая, как правильно готовить, строить, чинить, программировать и многое-многое другое.
           </p>
-          <p class="c-landing__main-text c-landing__main-bold-text main-info__last-paragraph">Вступайте в наше сообщество!</p>
-          <div class="col-sx-12">
+          <p class="c-landing__main-text c-landing__main-bold-text">Вступайте в наше сообщество!</p>
+          <div>
             <a href="#" class="c-btn c-empty-btn main-info__btn">Получить знания</a>
             <a href="#" class="c-btn c-btn-with-icon main-info__btn c-landing-icon-sm c-icon-rock-hand">Поделиться опытом</a>
           </div>
         </section>
       </div>
-      <div class="main-info__block col-xs-12 col-md-6">
+      <div class="main-info__instruction-wrapper col-xs-12 col-md-6 hidden-sm hidden-xs">
         <section class="instruction main-info__instruction">
           <img src="./img/instruction-avatar-pizza.png" alt="Изображение рецепта" class="instruction__image" width="350" height="200">
           <h3 class="instruction__heading">Готовим правильный стейк дома. Инструкция</h3>
@@ -160,15 +160,15 @@
           <h3 class="features__item-heading">Поиск</h3>
           <p class="c-landing__main-text features__item-text">позволит найти именно то, что вам необходимо в океане данных</p>
         </li>
-        <li class="features__item c-landing-icon-lg c-landing-icon-lg-like col-md-3 col-sm-6 col-sx-12">
+        <li class="features__item c-landing-icon-lg c-landing-icon-lg-like col-md-3 col-sm-6 col-xs-12">
           <h3 class="features__item-heading">Оценки</h3>
           <p class="c-landing__main-text features__item-text">позволят выделить наилучшие работы наших мастеров</p>
         </li>
-        <li class="features__item c-landing-icon-lg c-landing-icon-lg-write col-md-3 col-sm-6 col-sx-12">
+        <li class="features__item c-landing-icon-lg c-landing-icon-lg-write col-md-3 col-sm-6 col-xs-12">
           <h3 class="features__item-heading">Подписка</h3>
           <p class="c-landing__main-text features__item-text">позволит видеть нужные инструкции в первую очередь</p>
         </li>
-        <li class="features__item c-landing-icon-lg c-landing-icon-lg-man col-md-3 col-sm-6 col-sx-12">
+        <li class="features__item c-landing-icon-lg c-landing-icon-lg-man col-md-3 col-sm-6 col-xs-12">
           <h3 class="features__item-heading">Аккаунт</h3>
           <p class="c-landing__main-text features__item-text">позволит получить больше возможностей сервиса</p>
         </li>
@@ -191,7 +191,7 @@
         <a href="#" class="c-btn agitation__btn c-btn-with-icon c-landing-icon-sm c-icon-rock-hand">Поделиться опытом</a>
       </div>
     </section>
-    <section class="staff row">
+    <section id="staff" class="staff row">
       <h2 class="c-landing__heading-2 staff__heading col-xs-12">Перед вами – лучшие мастера WikiRuki!</h2>
       <p class="c-landing__main-text staff__paragraph col-xs-12">И каждый может быть в их числе!</p>
       <div class="multi-slider staff__slider col-xs-12">
@@ -237,7 +237,7 @@
         <button class="multi-slider__btn-right " type="button" name="button">&#8658;</button>
       </div>
     </section>
-    <section class="user-role row">
+    <section id="user-role" class="user-role row">
       <div class="col-xs-12">
         <div class="user-role__block container-fluid">
           <div class="row">
@@ -332,7 +332,7 @@
         <button class="multi-slider__btn-right" type="button" name="button">Вперед</button>
       </div>
     </section>
-    <ul class="user-reviews row">
+    <ul id="user-reviews" class="user-reviews row">
       <h2 class="c-landing__heading-2 user-reviews__heading col-xs-12">О чем говорят мастера и ученики портала <span class="c-landing__text-logo">WikiRuki</span></h2>
       <li class="review-card user-reviews__item col-lg-6 col-xs-12">
         <img src="https://via.placeholder.com/80x80" alt="" class="review-card__user-avatar" />
@@ -413,7 +413,7 @@
         </li>
       </ul>
     </section>
-    <section class="tasks row">
+    <section id="tasks" class="tasks row">
       <div class="tasks__block container-fluid">
         <div class="row">
           <h2 class="c-landing__heading-2 tasks__heading col-xs-12">
@@ -438,7 +438,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer c-landing__footer container">
+  <footer id="contacts" class="footer c-landing__footer container">
     <div class="row">
       <section class="footer__info col-xs-4">
         <img src="https://via.placeholder.com/194x35" alt="Логотип Wikiruki: символика компании на синем фоне" class="logo footer__logo" width="194" height="35" />
