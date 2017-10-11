@@ -547,11 +547,13 @@ body {
 .single-slider__btn:hover {
   background-color: var(--c-landing-highlight);
   border: 2px solid white;
+  margin-top: 24px;
 }
 
 .single-slider__btn:active {
   background-color: var(--c-landing-active);
   border: solid 2px var(--c-landing-active);
+  margin-top: 24px;
 }
 
 
