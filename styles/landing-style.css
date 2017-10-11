@@ -563,6 +563,10 @@ body {
   cursor: default;
 }
 
+.single-slider__item:not(.single-slider__item--active) {
+  display: none;
+}
+
 /* End of Single-slider-block section */
 
 /* End of Common section */
@@ -966,10 +970,10 @@ so to undo custom designing of centration comment icon section above */
   position: relative;
   z-index: 0;
 
-  padding-top: 158px;
+  padding-top: 218px;
   padding-bottom: 225px;
 
-  background: var(--c-landing-bg-placeholder-color) url(../img/advantage-bg.png) no-repeat top left;
+  background: var(--c-landing-bg-placeholder-color) url(../img/advantage-bg.png) no-repeat bottom left;
 }
 
 .main-info__instruction-wrapper {
@@ -1229,6 +1233,12 @@ so to undo custom designing of centration comment icon section above */
   margin-right: 35px;
 }
 
+@media (max-width: 1199px) {
+  .agitation__block p {
+    width: 100%;
+  }
+}
+
 @media (max-width: 991px) {
   .agitation {
     padding-top: 25px;
@@ -1265,7 +1275,7 @@ so to undo custom designing of centration comment icon section above */
   position: relative;
   z-index: 0;
 
-  padding: 80px 193px 181px 245px;
+  padding: 80px 193px 181px 228px;
 
   background-color: var(--c-landing-semi-bg-color);
 }
@@ -1555,12 +1565,14 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .user-role__block-content {
+  position: relative;
+
   margin-bottom: 50px;
 
   text-align: center;
 }
 
-.user-role__block-content:first-of-type::after {
+.user-role__block-content:first-of-type::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1574,12 +1586,44 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .user-role__content-heading {
+  position: relative;
+
   margin-bottom: 33px;
 
   font-size: 32px;
   line-height: 46px;
   text-transform: capitalize;
 }
+
+/* Begin of User-role Tab */
+/*.user-block__tab {
+  display: block;
+}
+
+.user-role__content-heading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 0;
+}
+
+.user-block__tab-wrapper {
+  display: none;
+}
+
+#user-block__tab-btn-master:checked ~ .user-role__block-content > label[for="user-block__tab-btn-master"] ~ .user-block__tab-wrapper {
+  display: block;
+}
+
+#user-block__tab-btn-apprentice:checked ~ .user-role__block-content > label[for="user-block__tab-btn-apprentice"] ~ .user-block__tab-wrapper {
+  display: block;
+}*/
+
+/* End of User-role Tab */
 
 .user-role__list {
   margin: 0 0 52px;
@@ -1624,6 +1668,8 @@ so to undo custom designing of centration comment icon section above */
   left: 22px;
 }
 
+
+
 @media (max-width: 1199px) {
   .user-role {
     padding-bottom: 90px;
@@ -1642,10 +1688,14 @@ so to undo custom designing of centration comment icon section above */
 
 @media (max-width: 767px) {
   .user-role__list {
-    padding-left: 100px;
+  	display: flex;
+  	flex-flow: column;
+  	padding-left: 25px;
+  	align-items: flex-start;
+  	width: 150px;
+  	margin: 0 auto 52px;
   }
 }
-
 
 /* End of User-role-block section */
 
@@ -1709,6 +1759,10 @@ so to undo custom designing of centration comment icon section above */
 }
 
 @media (max-width: 1499px) {
+  .service-content {
+    padding-bottom: 90px;
+  }
+
   .service-content__slider .multi-slider__item--active:not(.multi-slider__item--active-single) {
     display: none;
   }
@@ -1727,6 +1781,10 @@ so to undo custom designing of centration comment icon section above */
 }
 
 @media (max-width: 1199px) {
+  .service-content__slider .multi-slider__slides {
+    margin: 0;
+  }
+
   .service-content__slider .multi-slider__btn-right {
     right: 150px;
   }
@@ -1761,16 +1819,22 @@ so to undo custom designing of centration comment icon section above */
 /* Begin of Users-reviews-block section */
 
 .user-reviews {
-  padding: 57px 169px 96px;
   margin-bottom: 0;
-  background-image: linear-gradient(to bottom, #ffffff, #ebeafb);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 57px 169px 96px;
+
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebeafb));
+  background-image: -webkit-linear-gradient(top, #ffffff, #ebeafb);
+  background-image:      -o-linear-gradient(top, #ffffff, #ebeafb);
+  background-image:         linear-gradient(to bottom, #ffffff, #ebeafb);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 .user-reviews__heading {
+  margin-bottom: 64px;
+
   font-size: 24px;
   line-height: 46px;
-  margin-bottom: 64px;
 }
 
 .user-reviews__heading::after {
@@ -1778,13 +1842,16 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .review-card {
-  padding: 25px 26px 19px 130px;
-  max-width: 527px;
-  min-height: 219px;
-  background-color: var(--c-landing-main-bg-color);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
-  margin-bottom: 33px;
   position: relative;
+
+  max-width: 527px;
+  min-height: 225px;
+  margin-bottom: 33px;
+  padding: 25px 26px 19px 130px;
+
+  background-color: var(--c-landing-main-bg-color);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 }
 
 .review-card:nth-of-type(odd) {
@@ -1792,10 +1859,11 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .review-card__user-avatar {
-  border-radius: 50%;
   position: absolute;
   top: 25px;
   left: 25px;
+
+  border-radius: 50%;
 }
 
 .review-card__name {
@@ -1804,18 +1872,44 @@ so to undo custom designing of centration comment icon section above */
 
 .review-card__user-rank {
   display: block;
+  margin-bottom: 9px;
+
   font: (--open-sans);
   font-size: 17px;
   line-height: 24px;
   color: rgba(16, 13, 64, 0.7);
-  margin-bottom: 9px;
 }
 
 .review-card__review-text {
   min-height: 115px;
+
   font-size: 14px;
   line-height: 24px;
   font-style: italic;
+}
+
+@media (max-width: 1499px) {
+  .user-reviews {
+    padding: 50px 100px;
+  }
+
+  .user-reviews__item:nth-of-type(n + 1) {
+    max-width: 100%;
+    min-height: 0;
+    margin-right: 0;
+    padding-bottom: 35px;
+  }
+
+  .review-card__review-text {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .user-reviews {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
 /* End of User-reviews-block section */
@@ -1823,15 +1917,17 @@ so to undo custom designing of centration comment icon section above */
 /* Begin of Gifts-block section */
 
 .gifts {
+  margin-bottom: 0;
   padding-top: 139px;
   padding-bottom: 155px;
-  margin-bottom: 0;
+
   background: rgb(250, 250, 250) url(../img/gifts-bg.png) no-repeat top right;
   background-position: 0 -10px;
 }
 
 .gifts__heading {
   margin-bottom: 110px;
+
   text-align: left;
 }
 
@@ -1840,73 +1936,113 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .gifts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row;
+      flex-flow: row wrap;
   justify-content: space-between;
   padding: 0 16px;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: justify;
+  -ms-flex-flow: row wrap;
+  -ms-flex-pack: justify;
 }
 
 .gift-card {
   width: 355px;
-  background-color: var(--c-landing-main-bg-color);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+
   text-align: center;
+
+  background-color: var(--c-landing-main-bg-color);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* This block regulate working arrange of single slider in dependence with responsive design */
+.gifts__gift-card.single-slider__item {
+  display: block;
+}
+
+.gifts__slider .single-slider__btn-group {
+  display: none;
 }
 
 .gift-card__gift-anouncment-text {
   display: block;
+  padding: 17px 0 19px;
+
   font: ver(--open-sans);
   font-weight: 600;
   font-size: 22px;
   line-height: 46px;
+  text-align: center;
   color: var(--gift-card-main-color);
   text-transform: uppercase;
-  text-align: center;
-  padding: 17px 0 19px;
 }
 
 .gift-card__terms {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
+      flex-flow: row nowrap;
   justify-content: center;
-  padding: 18px 0 19px;
   min-height: 92px;
+  padding: 18px 0 19px;
+
   text-align: center;
+
   background-color: rgba(202, 211, 223, 0.22);
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -ms-flex-flow: row nowrap;
+  -ms-flex-pack: center;
 }
 
 .gift-card__terms-text {
   display: block;
-  color: var(--c-landing-main-color);
+  padding: 0 4px;
+
+  font-weight: 300;
   font-size: 18px;
   line-height: 24px;
-  font-weight: 300;
-  padding: 0 4px;
+  color: var(--c-landing-main-color);
 }
 
 .gift-card__terms-text:first-of-type {
   align-self: flex-start;
+
+  -ms-flex-item-align: start;
 }
 
 .gift-card__terms-text:last-of-type {
   align-self: flex-end;
+
+  -ms-flex-item-align: end;
 }
 
 .gift-card__terms-requested-amount {
-  font-size: 55px;
-  font-weight: 600;
-  color: var(--gift-card-highlight);
   align-self: center;
+
+  font-weight: 600;
+  font-size: 55px;
+  color: var(--gift-card-highlight);
+
+  -ms-flex-item-align: center;
 }
 
 .gift-card__reward {
+  min-height: 72px;
   margin: 44px 0 50px;
-  color: var(--gift-card-main-color);
+  padding: 0 76px;
+
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  padding: 0 76px;
-  min-height: 72px;
+  color: var(--gift-card-main-color);
 }
 
 .gift-card__rewarding-item {
@@ -1915,8 +2051,44 @@ so to undo custom designing of centration comment icon section above */
 
 .gift-card__btn {
   margin-bottom: 50px;
-  padding-left: 62px;
   padding-right: 62px;
+  padding-left: 62px;
+}
+
+@media (max-width: 1199px) {
+  .gifts {
+    padding-bottom: 100px;
+
+    background-color: #f6f6f4;
+    background-position: top center;
+  }
+
+  .gifts__heading {
+    margin-bottom: 50px;
+  }
+
+  .gifts__list {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .gifts__gift-card {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .single-slider__item:not(.single-slider__item--active) {
+    display: none;
+  }
+
+  .gifts__gift-card {
+    margin-bottom: 0;
+  }
+
+  .gifts__slider .single-slider__btn-group {
+    display: block;
+  }
 }
 
 /* End of Gifts-block section */
@@ -1924,31 +2096,37 @@ so to undo custom designing of centration comment icon section above */
 /* Begin of Tasks-block section */
 
 .tasks {
-  background: #e8e2e1 url(../img/mission-bg.png) no-repeat bottom center;
   padding: 0 134px;
+
+  background: #e8e2e1 url(../img/mission-bg.png) no-repeat bottom center;
 }
 
 .tasks__block {
-  box-shadow: 0 0 10px 0 rgba(45, 38, 77, 0.2);
-  border-radius: 4px;
-  background-color: var(--c-landing-semi-bg-color);
-  padding-bottom: 67px;
   margin-top: -38px;
   margin-bottom: 134px;
+  padding-bottom: 67px;
+
+  background-color: var(--c-landing-semi-bg-color);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(45, 38, 77, 0.2);
+          box-shadow: 0 0 10px 0 rgba(45, 38, 77, 0.2);
 }
 
 .tasks__heading {
   --tasks-heading-p-b: 54px;
 
   display: block;
-  background-color: var(--c-landing-main-bg-color);
-  text-transform: none;
-  line-height: 46px;
+  margin-bottom: 298px;
   padding-top: 40px;
   padding-bottom: var(--tasks-heading-p-b);
+
+  line-height: 46px;
+  text-transform: none;
+
+  background-color: var(--c-landing-main-bg-color);
   border-radius: 4px 4px 0 0;
-  box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
-  margin-bottom: 298px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
+          box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
 }
 
 .tasks__heading::after {
@@ -1957,30 +2135,35 @@ so to undo custom designing of centration comment icon section above */
 
 .tasks__heading::before {
   content: "";
-  display: block;
   position: absolute;
-  background: rgba(0, 0, 0, 0) url(../img/illustration-wikiruki.png) no-repeat center;
-  width: 184px;
-  height: 151px;
   bottom: -214px;
   left: calc(50% - 92px);
+
+  display: block;
+  width: 184px;
+  height: 151px;
+
+  background: rgba(0, 0, 0, 0) url(../img/illustration-wikiruki.png) no-repeat center;
 }
 
 .tasks__list {
-  counter-reset: li;
-  list-style: none;
-  padding: 0 120px;
   margin-bottom: 15px;
+  padding: 0 120px;
+
+  list-style: none;
+
+  counter-reset: li;
 }
 
 .tasks__list li {
-  font-family: var(--open-sans);
-  color: var(--c-landing-main-color);
-  font-size: 18px;
-  line-height: 25px;
-  padding-left: 86px;
   min-height: 105px;
   margin-bottom: 10px;
+  padding-left: 86px;
+
+  font-size: 18px;
+  line-height: 25px;
+  font-family: var(--open-sans);
+  color: var(--c-landing-main-color);
 }
 
 .tasks__list li:nth-last-of-type(odd) {
@@ -1993,18 +2176,21 @@ so to undo custom designing of centration comment icon section above */
 
 .tasks__list li::after {
   content: counter(li) ".";
-  counter-increment: li;
   position: absolute;
-  left: 2px;
   top: 16px;
+  left: 2px;
+
   display: block;
   width: 56px;
-  font-family: var(--open-sans);
+
   font-weight: 700;
   font-size: 22px;
-  text-align: center;
   line-height: 25px;
+  font-family: var(--open-sans);
+  text-align: center;
   color: var(--c-landing-highlight);
+
+  counter-increment: li;
 }
 
 .tasks__list li:nth-last-of-type(even)::after {
@@ -2014,11 +2200,13 @@ so to undo custom designing of centration comment icon section above */
 .tasks__list li::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
+
   display: block;
   width: 56px;
   height: 56px;
+
   background-color: #e6e9ee;
   border-radius: 50%;
 }
@@ -2028,10 +2216,11 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .tasks__paragraph {
-  text-align: center;
   margin-bottom: 25px;
+
   font-size: 18px;
   line-height: 25px;
+  text-align: center;
 }
 
 .tasks__btn-wrapper {
@@ -2041,6 +2230,64 @@ so to undo custom designing of centration comment icon section above */
 .tasks__btn {
   padding-right: 40px;
   padding-left: calc(44px + var(--c-sm-icons-width));
+}
+
+@media (max-width: 1499px) {
+  .tasks__list {
+    padding: 0 50px;
+  }
+
+  .tasks__list li:nth-last-of-type(2n+1) {
+    padding-right: 50px;
+  }
+
+  .tasks__list li:nth-last-of-type(2n) {
+    padding-left: 90px;
+  }
+
+  .tasks__list li:nth-last-of-type(2n)::before {
+    left: 12px;
+  }
+
+  .tasks__list li:nth-last-of-type(2n)::after {
+    left: 14px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .tasks__heading {
+    margin-bottom: 230px;
+  }
+
+  .tasks__heading::before {
+    bottom: -180px;
+  }
+
+  li.tasks__item {
+    min-height: 0;
+    margin-bottom: 50px;
+  }
+
+  .tasks__list li:nth-last-of-type(n + 1) {
+    padding-right: 0;
+    padding-left: 86px;
+  }
+
+  .tasks__list li:nth-last-of-type(n + 1)::before {
+    top: calc(50% - 28px);
+    left: 0;
+  }
+
+  .tasks__list li:nth-last-of-type(n + 1)::after {
+    top: calc(50% - 13px);
+    left: 2px;
+  }
+}
+
+@media (max-width: 991px) {
+  .tasks {
+    padding: 0 25px;
+  }
 }
 
 /* End of Tasks block */
@@ -2102,6 +2349,7 @@ so to undo custom designing of centration comment icon section above */
 .footer__paragraph {
   color: var(--c-landing-main-bg-color);
   max-width: 310px;
+  line-height: 20px;
 }
 
 .footer__contacts {
@@ -2157,6 +2405,57 @@ so to undo custom designing of centration comment icon section above */
   transform: scale(0.56);
   top: -12px;
   left: -2px;
+}
+
+@media (max-width: 1499px) {
+  .footer__info:nth-child(2) {
+	  padding: 0 25px;
+  }
+
+  .footer__info:last-of-type {
+    margin-left: 0;
+  }
+
+  .footer__info:nth-of-type(n + 1)::after {
+    right: 90px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .footer__info:nth-of-type(n+1)::after {
+  	right: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer__info:nth-child(n + 1) {
+    padding: 0 15px;
+  }
+
+  .footer__info:first-of-type::after {
+    display: none;
+  }
+
+  .footer__info:nth-last-of-type(2)::after {
+    right: 15px;
+    height: 150px;
+  }
+
+  .footer__logo {
+    margin-bottom: 35px;
+  }
+
+  .footer__paragraph {
+    display: none;
+  }
+
+
+
 }
 
 /* End of Footer-block section */

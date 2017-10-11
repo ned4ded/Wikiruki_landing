@@ -6,6 +6,12 @@
   <title> Wikiruki - сообщество таких как ты!</title>
   <meta name="viewport" content="width=device-width" />
 
+  <style>
+    .user-block__tab {
+      display: none;
+    }
+  </style>
+
   <!-- bootstrap 3.4 -->
   <link rel="stylesheet" href="styles/bootstrap.css" />
 
@@ -178,7 +184,7 @@
       <div class="col-lg-5 col-md-6 col-sm-12">
         <div class="single-slider agitation-single-slider">
           <ul class="single-slider__slides">
-            <li class="single-slider__item single-slider__item--active"><img src="https://via.placeholder.com/426x474" alt="Девушки режут овощи" class="single-slider__image"></li>
+            <li class="single-slider__item single-slider__item--active"><img src="img/aggitation-slider-slide1.png" alt="Девушки режут овощи" class="single-slider__image"></li>
             <li class="single-slider__item hidden"><img src="https://via.placeholder.com/426x474" alt="Девушки режут овощи" class="single-slider__image"></li>
           </ul>
           <div class="single-slider__btn-group">
@@ -204,7 +210,7 @@
         <ul class="multi-slider__slides row">
           <li class="personal-card multi-slider__item col-md-4 col-xs-12 multi-slider__item--active">
             <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="https://via.placeholder.com/199x245" alt="" />
+              <img class="personal-card__image" src="img/staff-block-photo-1.png" alt="" />
               <ul class="personal-card__link-list social-links">
                 <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
                 <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
@@ -216,7 +222,7 @@
           </li>
           <li class="personal-card multi-slider__item col-md-4 col-xs-12 multi-slider__item--active multi-slider__item--active-single">
             <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="https://via.placeholder.com/199x245" alt="" />
+              <img class="personal-card__image" src="img/staff-block-photo-2.png" alt="" />
               <ul class="personal-card__link-list social-links">
                 <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
                 <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
@@ -228,7 +234,7 @@
           </li>
           <li class="personal-card multi-slider__item col-md-4 col-xs-12 multi-slider__item--active">
             <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="https://via.placeholder.com/199x245" alt="" />
+              <img class="personal-card__image" src="img/staff-block-photo-3.png" alt="" />
               <ul class="personal-card__link-list social-links">
                 <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
                 <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
@@ -250,25 +256,36 @@
             <h2 class="c-landing__heading-2 col-xs-12 user-role__heading">Определите свою роль в нашей дружественной команде</h2>
           </div>
           <div class="row">
-            <div class="user-role__block-content col-xs-6">
-              <h3 class="c-landing__heading-3 user-role__content-heading">Ученик</h3>
-              <ul class="user-role__list">
-                <li class="user-role__item">Изучайте</li>
-                <li class="user-role__item">Познавайте</li>
-                <li class="user-role__item">Общайтесь</li>
-                <li class="user-role__item">Исследуйте</li>
-              </ul>
-              <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-rock-hand">Получить знания</a>
+            <!-- btns used for tabbing this section on 767px -->
+            <input id="user-block__tab-btn-apprentice" class="user-block__tab" type="radio" name="gender" value="apprentice" checked>
+            <input id="user-block__tab-btn-master" class="user-block__tab" type="radio" name="gender" value="master">
+            <div class="user-role__block-content col-sm-6 col-xs-12">
+              <label for="user-block__tab-btn-apprentice">
+                <h3 class="c-landing__heading-3 user-role__content-heading">Ученик</h3>
+              </label>
+              <div class="user-block__tab-wrapper">
+                <ul class="user-role__list">
+                  <li class="user-role__item">Изучайте</li>
+                  <li class="user-role__item">Познавайте</li>
+                  <li class="user-role__item">Общайтесь</li>
+                  <li class="user-role__item">Исследуйте</li>
+                </ul>
+                <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-rock-hand">Получить знания</a>
+              </div>
             </div>
-            <div class="user-role__block-content col-xs-6">
-              <h3 class="c-landing__heading-3 user-role__content-heading">Мастер</h3>
-              <ul class="user-role__list">
-                <li class="user-role__item">Создавайте</li>
-                <li class="user-role__item">Лидируйте</li>
-                <li class="user-role__item">Обучайте</li>
-                <li class="user-role__item">Зарабатывайте</li>
-              </ul>
-              <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-pointer-hand">Стать мастером</a>
+            <div class="user-role__block-content col-sm-6 col-xs-12">
+              <label for="user-block__tab-btn-master">
+                <h3 class="c-landing__heading-3 user-role__content-heading">Мастер</h3>
+              </label>
+              <div class="user-block__tab-wrapper">
+                <ul class="user-role__list">
+                  <li class="user-role__item">Создавайте</li>
+                  <li class="user-role__item">Лидируйте</li>
+                  <li class="user-role__item">Обучайте</li>
+                  <li class="user-role__item">Зарабатывайте</li>
+                </ul>
+                <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-pointer-hand">Стать мастером</a>
+            </div>
             </div>
           </div>
         </div>
@@ -340,8 +357,8 @@
     </section>
     <ul id="user-reviews" class="user-reviews row">
       <h2 class="c-landing__heading-2 user-reviews__heading col-xs-12">О чем говорят мастера и ученики портала <span class="c-landing__text-logo">WikiRuki</span></h2>
-      <li class="review-card user-reviews__item col-lg-6 col-xs-12">
-        <img src="https://via.placeholder.com/80x80" alt="" class="review-card__user-avatar" />
+      <li class="review-card user-reviews__item col-xs-12">
+        <img src="img/comment-photo-1.png" alt="" class="review-card__user-avatar" />
         <p class="name review-card__name">
           Виктор <span class="last-name">Антонов</span>
         </p>
@@ -350,8 +367,8 @@
           "Я много лет работаю в ресторанном бизнесе. И вот, наткнувшись на этот портал, решил открыть перед вами немало ловких приемов, которые позволят готовить изумительные шедевры на самой обычной кухне."
         </p>
       </li>
-      <li class="review-card user-reviews__item col-lg-6 col-xs-12">
-        <img src="https://via.placeholder.com/80x80" alt="" class="review-card__user-avatar" />
+      <li class="review-card user-reviews__item col-xs-12">
+        <img src="img/comment-photo-2.png" alt="" class="review-card__user-avatar" />
         <p class="name review-card__name">
           Дарья <span class="last-name">Игнатова</span>
         </p>
@@ -360,8 +377,8 @@
           "Профессионально занимаюсь фотографией. И очень часто мне задают вопросы о том, как сделать тот или иной кадр, какие параметры съемки в той или иной ситуации лучше. Делюсь своими знаниями тут."
         </p>
       </li>
-      <li class="review-card user-reviews__item col-lg-6 col-xs-12">
-        <img src="https://via.placeholder.com/80x80" alt="" class="review-card__user-avatar" />
+      <li class="review-card user-reviews__item col-xs-12">
+        <img src="img/comment-photo-4.png" alt="" class="review-card__user-avatar" />
         <p class="name review-card__name">
           Павел <span class="last-name">Березовцев</span>
         </p>
@@ -370,8 +387,8 @@
           "Благодаря здешним инструкциям научился из обычной курицы готовить невероятные блюда. Теперь, когда собираемся группой на пикник, все дружно просят приготовить куриные ножки."
         </p>
       </li>
-      <li class="review-card user-reviews__item col-lg-6 col-xs-12">
-        <img src="https://via.placeholder.com/80x80" alt="" class="review-card__user-avatar" />
+      <li class="review-card user-reviews__item col-xs-12">
+        <img src="img/comment-photo-3.png" alt="" class="review-card__user-avatar" />
         <p class="name review-card__name">
           Ирина <span class="last-name">Карташова</span>
         </p>
@@ -383,55 +400,62 @@
     </ul>
     <section class="gifts row">
       <h2 class="c-landing__heading-2 gifts__heading col-xs-12">Получи подарки за инструкции</h2>
-      <ul class="gifts__list col-xs-12">
-        <li class="gift-card gifts__gift-card">
-          <span class="gift-card__gift-anouncment-text">Подарок</span>
-          <p class="gift-card__terms">
-            <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
-            <!-- Pay attention: u have to resolve russion declension -->
-          </p>
-          <p class="gift-card__reward">
-            Получи в подарок <span class="gift-card__rewarding-item">Item</span> с символикой wikiruki
-          </p>
-          <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
-        </li>
-        <li class="gift-card gifts__gift-card">
-          <span class="gift-card__gift-anouncment-text">Подарок</span>
-          <p class="gift-card__terms">
-            <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
-            <!-- Pay attention: u have to resolve russion declension -->
-          </p>
-          <p class="gift-card__reward">
-            Получи в подарок <span class="gift-card__rewarding-item">Item</span> с символикой wikiruki
-          </p>
-          <a href="#" class="c-btn gift-card__btn">Опубликовать</a>
-        </li>
-        <li class="gift-card gifts__gift-card">
-          <span class="gift-card__gift-anouncment-text">Подарок</span>
-          <p class="gift-card__terms">
-            <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
-            <!-- Pay attention: u have to resolve russion declension -->
-          </p>
-          <p class="gift-card__reward">
-            Получи в подарок <span class="gift-card__rewarding-item">Item</span> с символикой wikiruki
-          </p>
-          <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
-        </li>
-      </ul>
+      <div class="single-slider gifts__slider col-xs-12">
+        <ul class="gifts__list single-slider__slides">
+          <li class="gift-card gifts__gift-card single-slider__item">
+            <span class="gift-card__gift-anouncment-text">Подарок</span>
+            <p class="gift-card__terms">
+              <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
+              <!-- Pay attention: u have to resolve russion declension -->
+            </p>
+            <p class="gift-card__reward">
+              Получи в подарок <span class="gift-card__rewarding-item">футболку</span> с символикой wikiruki
+            </p>
+            <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+          </li>
+          <li class="gift-card gifts__gift-card single-slider__item single-slider__item--active">
+            <span class="gift-card__gift-anouncment-text">Подарок</span>
+            <p class="gift-card__terms">
+              <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">3</span><span class="gift-card__terms-text">инструкций</span>
+              <!-- Pay attention: u have to resolve russion declension -->
+            </p>
+            <p class="gift-card__reward">
+              Получи в подарок <span class="gift-card__rewarding-item">кружку</span> с символикой wikiruki
+            </p>
+            <a href="#" class="c-btn gift-card__btn">Опубликовать</a>
+          </li>
+          <li class="gift-card gifts__gift-card single-slider__item">
+            <span class="gift-card__gift-anouncment-text">Подарок</span>
+            <p class="gift-card__terms">
+              <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">1</span><span class="gift-card__terms-text">инструкций</span>
+              <!-- Pay attention: u have to resolve russion declension -->
+            </p>
+            <p class="gift-card__reward">
+              Получи в подарок <span class="gift-card__rewarding-item">магнит</span> и значок с символикой wikiruki
+            </p>
+            <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+          </li>
+        </ul>
+        <div class="single-slider__btn-group">
+            <button class="single-slider__btn" type="button" name="button">Первый слайд</button>
+            <button class="single-slider__btn single-slider__btn--active" type="button" name="button">Второй слайд</button>
+            <button class="single-slider__btn" type="button" name="button">Третий слайд</button>
+        </div>
+    </div>
     </section>
     <section id="tasks" class="tasks row">
       <div class="tasks__block container-fluid">
         <div class="row">
           <h2 class="c-landing__heading-2 tasks__heading col-xs-12">
                 Создатели <span class="c-landing__text-logo">WikiRuki</span> ставят перед собой следующие задачи
-              </h2>
+          </h2>
         </div>
         <ol class="tasks__list row">
-          <li class="tasks__item c-landing__main-text col-sm-6 col-xs-12">Объединить и сплотить людей из разных уголков земного шара</li>
-          <li class="tasks__item c-landing__main-text col-sm-6 col-xs-12">Предоставить возможность профессионалам раскрыть свой потенциал</li>
-          <li class="tasks__item c-landing__main-text col-sm-6 col-xs-12">Дать шанс новичкам проявить свои амбиции, талант и добиться успеха</li>
-          <li class="tasks__item c-landing__main-text col-sm-6 col-xs-12">Превратить хобби в профессию, приносящую хороший доход</li>
-          <li class="tasks__item c-landing__main-text col-sm-6 col-xs-12">Создать уникальную энциклопедию практических знаний</li>
+          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Объединить и сплотить людей из разных уголков земного шара</li>
+          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Предоставить возможность профессионалам раскрыть свой потенциал</li>
+          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Дать шанс новичкам проявить свои амбиции, талант и добиться успеха</li>
+          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Превратить хобби в профессию, приносящую хороший доход</li>
+          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Создать уникальную энциклопедию практических знаний</li>
         </ol>
         <div class="row">
           <p class="c-landing__main-text tasks__paragraph col-xs-12">
@@ -446,17 +470,16 @@
   </main>
   <footer id="contacts" class="footer c-landing__footer container">
     <div class="row">
-      <section class="footer__info col-xs-4">
-        <img src="https://via.placeholder.com/194x35" alt="Логотип Wikiruki: символика компании на синем фоне" class="logo footer__logo" width="194" height="35" />
+      <section class="footer__info col-lg-5 col-xs-12">
+        <img src="img/logo-white.png" alt="Логотип Wikiruki: символика компании на синем фоне" class="logo footer__logo" width="194" height="35" />
         <p class="footer__paragraph">
           сообщество (кулинаров, программистов, механиков, садоводов, дизайнеров, предпринимателей, музыкантов, спортсменов, изобретателей…) таких как ты!
         </p>
       </section>
-      <section class="footer__info col-xs-4">
+      <section class="footer__info col-lg-4 col-xs-6">
         <h2 class="footer__heading">Контакты</h2>
         <address>
             <p class="footer__paragraph">213 G Street Suite 34919 <br /> New York, NY, USA</p>
-            <!-- Visit Mozilla's course and check how could u set 1 head for 2 td -->
             <table class="footer__contacts">
               <tbody>
                 <tr>
@@ -476,7 +499,7 @@
             </table>
           </address>
       </section>
-      <section class="footer__info col-xs-4">
+      <section class="footer__info col-lg-3 col-xs-6">
         <h2 class="footer__heading">Свяжитесь с нами</h2>
         <ul class="social-links footer__social-links">
           <li><a href="#" class="social-links__item c-landing-icon-md c-icon-fb">Facebook</a></li>
@@ -489,12 +512,6 @@
 
   <script  src="http://webapplayers.com/inspinia_admin-v2.7/js/jquery-3.1.1.min.js"></script>
   <script  src="http://webapplayers.com/inspinia_admin-v2.7/js/bootstrap.min.js"></script>
-  <!-- <script  src="http://webapplayers.com/inspinia_admin-v2.7/js/inspinia.js"></script> -->
-  <!-- <script  src="http://webapplayers.com/inspinia_admin-v2.7/js/plugins/metisMenu/jquery.metisMenu.js"></script> -->
-  <!-- <script  src="http://webapplayers.com/inspinia_admin-v2.7/js/plugins/wow/wow.min.js"></script> -->
-  <!-- <script  src="http://webapplayers.com/inspinia_admin-v2.7/js/plugins/slimscroll/jquery.slimscroll.min.js"></script> -->
-  <!-- <script  src="http://webapplayers.com/inspinia_admin-v2.7/js/plugins/pace/pace.min.js"></script> -->
-
 </body>
 
 </html>
