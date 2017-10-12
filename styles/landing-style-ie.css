@@ -1266,12 +1266,14 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .agitation__heading::after {
-  bottom: 8px;
+  /* I have to use  translate, because left/bottom couldnt outrange .agitation__heading properties */
   left: 0;
-  /* IDK why, but left property in this block doesnt work in IE and Edge, i have to use -ms-translate to fix this */
 
-  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(3px, -8px);
+      -ms-transform: translate(3px, -8px);
+          transform: translate(3px, -8px);
 }
+
 
 .agitation__block p {
   width: 560px;
@@ -2120,10 +2122,12 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .gifts__heading::after {
-  left: 15px;
-  /* IDK why, but left property in this block doesnt work in IE and Edge, i have to use -ms-translate to fix this */
+  /* I have to use  translate, because left/bottom couldnt outrange .agitation__heading properties */
+  left: 0;
 
-  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(15px, 0);
+      -ms-transform: translate(15px, 0);
+          transform: translate(15px, 0);
 }
 
 .gifts__list {
