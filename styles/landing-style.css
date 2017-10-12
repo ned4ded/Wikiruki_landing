@@ -191,7 +191,8 @@ body {
   width: var(--c-sm-icons-width);
   height: var(--c-sm-icons-height);
 
-  background: var(--sprite-icons);
+  background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
+  /*background: var(--sprite-icons);*/
 }
 
 .c-landing-icon-md::after {
@@ -204,7 +205,8 @@ body {
   width: var(--c-md-icons-width);
   height: var(--c-md-icons-height);
 
-  background: var(--sprite-icons);
+  /*background: var(--sprite-icons);*/
+  background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
 }
 
 .c-landing-icon-lg::after {
@@ -217,7 +219,8 @@ body {
   width: var(--c-lg-icons-width);
   height: var(--c-lg-icons-height);
 
-  background: var(--sprite-icons);
+  /*background: var(--sprite-icons);*/
+  background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
 }
 
 .c-icon-rock-hand::after {
@@ -998,7 +1001,7 @@ so to undo custom designing of centration comment icon section above */
   padding-top: 218px;
   padding-bottom: 225px;
 
-  background: white url(../img/advantage-bg.png) no-repeat bottom left;
+  background: #f6efe5 url(../img/advantage-bg.png) no-repeat bottom left;
 }
 
 .main-info__instruction-wrapper {
@@ -1544,7 +1547,7 @@ so to undo custom designing of centration comment icon section above */
   padding-top: 90px;
   padding-bottom: 165px;
 
-  background: var(--c-landing-bg-placeholder-color) url(../img/role-choice-bg.png) no-repeat bottom;
+  background: #f6efe5 url(../img/role-choice-bg.png) no-repeat bottom;
   /* to avoid adding another div and dimming the background a little */
   -webkit-box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
