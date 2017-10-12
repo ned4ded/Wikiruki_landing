@@ -4,50 +4,6 @@
 
 /* End of Import Section */
 
-/* Begin of Variables section */
-
-:root {
-  /* Colors, use it with color: */
-  --c-landing-main-bg-color: #fff;
-  --c-landing-semi-bg-color: #f7f8fa;
-  --c-landing-footer-bg-color: #2a2c92;
-  --c-landing-bg-placeholder-color: rgb(246, 239, 229);
-  --c-landing-main-color: #100d40;
-  --c-landing-main-color-9: rgba(16, 13, 64, 0.9);
-  --c-landing-main-color-8: rgba(16, 13, 64, 0.8);
-  --c-landing-h1-color: #1f1b7f;
-  --c-landing-h3-color: #e68148;
-  --c-landing-h3-color-7: rgba(230, 129, 72, 0.7);
-  --c-landing-highlight: #3f36ff;
-  --c-landing-active: #0901df;
-  --c-landing-instruction-main-color: #4e526e;
-  --c-landing-muted-color-5: rgba(33, 33, 33, 0.5);
-  --c-landing-muted-color-2: rgba(33, 33, 33, 0.2);
-  --gift-card-main-color: #030f61;
-  --gift-card-highlight: #0901df;
-
-  /* Fonts, use it with font: */
-  --roboto-slab: 'Roboto Slab', serif;
-  --lato: 'Lato', sans-serif;
-  --open-sans: 'Open Sans', sans-serif;
-  --roboto: 'Roboto', sans-serif;
-
-  /* Images, use it with bakcground: */
-  --sprite-icons: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
-
-  /* Element's sizes */
-  --c-xs-icons-width: 23px;
-  --c-xs-icons-height: 23px;
-  --c-sm-icons-width: 22px;
-  --c-sm-icons-height: 26px;
-  --c-md-icons-width: 41px;
-  --c-md-icons-height: 41px;
-  --c-lg-icons-width: 100px;
-  --c-lg-icons-height: 100px;
-}
-
-/* End of Variables section */
-
 /* Begin of Common section */
 
 body {
@@ -56,7 +12,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
 
   background-color: white;
 }
@@ -103,9 +59,9 @@ body {
   font-weight: 400;
   font-size: 48px;
   line-height: 65px;
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   text-align: left;
-  color: var(--c-landing-h1-color);
+  color: #1f1b7f;
 }
 
 .c-landing__annotation {
@@ -117,8 +73,8 @@ body {
 
   font-size: 16px;
   line-height: 100%;
-  font-family: var(--open-sans);
-  color: var(--c-landing-main-color);
+  font-family: 'Open Sans', sans-serif;
+  color: #100d40;
 }
 
 .c-landing__heading-2 {
@@ -129,9 +85,9 @@ body {
 
   font-size: 24px;
   line-height: 100%;
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
-  color: var(--c-landing-main-color);
+  color: #100d40;
   text-transform: uppercase;
 }
 
@@ -147,7 +103,7 @@ body {
   width: var(--h2-underline);
   height: 3px;
 
-  background-color: var(--c-landing-h3-color);
+  background-color: #e68148;
 }
 
 .c-landing__heading-3 {
@@ -155,14 +111,14 @@ body {
 
   font-size: 20px;
   line-height: 100%;
-  font-family: var(--roboto-slab);
-  color: var(--c-landing-h3-color);
+  font-family: 'Roboto Slab', serif;
+  color: #e68148;
   text-transform: uppercase;
 }
 
 .c-landing__text-logo {
   font-weight: 600;
-  color: var(--c-landing-highlight);
+  color: #3f36ff;
 }
 
 .c-landing__main-text {
@@ -170,9 +126,9 @@ body {
 
   font-size: 16px;
   line-height: 29px;
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   text-align: left;
-  color: var(--c-landing-main-color);
+  color: #100d40;
 }
 
 .c-landing__main-bold-text {
@@ -190,12 +146,13 @@ body {
   left: 0;
 
   display: block;
-  width: var(--c-xs-icons-width);
-  height: var(--c-xs-icons-height);
+  width: 23px;
+  height: 23px;
 
   background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
 }
 
+.c-landing-icon-sm:after,
 .c-landing-icon-sm::after {
   content: "";
   position: absolute;
@@ -203,11 +160,12 @@ body {
   left: 0;
 
   display: block;
-  width: var(--c-sm-icons-width);
-  height: var(--c-sm-icons-height);
+  width: 22px;
+  height: 26px;
+  /*background-color: rgba(0, 0, 0, 0);*/
 
   background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
-  /*background: var(--sprite-icons);*/
+  /*background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;*/
 }
 
 .c-landing-icon-md::after {
@@ -217,10 +175,10 @@ body {
   left: 0;
 
   display: block;
-  width: var(--c-md-icons-width);
-  height: var(--c-md-icons-height);
+  width: 41px;
+  height: 41px;
 
-  /*background: var(--sprite-icons);*/
+  /*background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;*/
   background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
 }
 
@@ -228,13 +186,13 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: calc(50% - calc(var(--c-lg-icons-width) / 2));
+  left: calc(50% - calc(100px / 2));
 
   display: block;
-  width: var(--c-lg-icons-width);
-  height: var(--c-lg-icons-height);
+  width: 100px;
+  height: 100px;
 
-  /*background: var(--sprite-icons);*/
+  /*background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;*/
   background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
 }
 
@@ -380,12 +338,12 @@ body {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   color: white;
   letter-spacing: 1px;
 
-  background-color: var(--c-landing-highlight);
-  border: 1px solid var(--c-landing-highlight);
+  background-color: #3f36ff;
+  border: 1px solid #3f36ff;
   border-radius: 4px;
 }
 
@@ -393,7 +351,7 @@ body {
   position: relative;
 
   padding-right: 15px;
-  padding-left: calc(28px + var(--c-sm-icons-width));
+  padding-left: calc(28px + 22px);
 }
 
 .c-btn-with-icon::after {
@@ -404,7 +362,7 @@ body {
 .c-empty-btn,
 .c-btn:hover,
 .c-btn:focus:hover {
-  color: var(--c-landing-highlight);
+  color: #3f36ff;
   text-decoration: none;
 
   background-color: rgba(0, 0, 0, 0);
@@ -415,7 +373,7 @@ body {
   color: white;
   text-decoration: none;
 
-  background-color: var(--c-landing-highlight);
+  background-color: #3f36ff;
 }
 
 .c-btn:active,
@@ -424,7 +382,7 @@ body {
 .c-empty-btn:hover:active {
   color: white;
 
-  background-color: var(--c-landing-active);
+  background-color: #0901df;
 }
 
 .c-btn:focus {
@@ -433,7 +391,7 @@ body {
 }
 
 .c-empty-btn:focus {
-  color: var(--c-landing-highlight);
+  color: #3f36ff;
   text-decoration: none;
 }
 
@@ -444,8 +402,8 @@ body {
 .name {
   font-size: 18px;
   line-height: 24px;
-  font-family: var(--open-sans);
-  color: var(--c-landing-main-color);
+  font-family: 'Open Sans', sans-serif;
+  color: #100d40;
 }
 
 .last-name {
@@ -464,8 +422,8 @@ body {
 
   font-weight: 400;
   font-size: 14px;
-  font-family: var(--open-sans);
-  color: var(--c-landing-main-bg-color);
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
 }
 
 /* End of social links section */
@@ -490,7 +448,7 @@ body {
   font-size: 0;
 
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid var(--c-landing-highlight);
+  border: 1px solid #3f36ff;
   border-radius: 50%;
 }
 
@@ -507,7 +465,7 @@ body {
   font-size: 0;
 
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid var(--c-landing-highlight);
+  border: 1px solid #3f36ff;
   border-radius: 50%;
   -webkit-transform: rotate(200grad);
       -ms-transform: rotate(200grad);
@@ -525,7 +483,7 @@ body {
   width: 1px;
   height: 13px;
 
-  background-color: var(--c-landing-highlight);
+  background-color: #3f36ff;
   -webkit-transform: rotate(-50grad);
       -ms-transform: rotate(-50grad);
           transform: rotate(-50grad);
@@ -542,7 +500,7 @@ body {
   width: 13px;
   height: 1px;
 
-  background-color: var(--c-landing-highlight);
+  background-color: #3f36ff;
   -webkit-transform: rotate(-50grad);
       -ms-transform: rotate(-50grad);
           transform: rotate(-50grad);
@@ -550,7 +508,7 @@ body {
 
 .multi-slider__btn-right:hover,
 .multi-slider__btn-left:hover {
-  background-color: var(--c-landing-highlight);
+  background-color: #3f36ff;
 }
 
 .multi-slider__btn-right:hover::after,
@@ -561,12 +519,12 @@ body {
 .multi-slider__btn-right:active::before,
 .multi-slider__btn-left:active::after,
 .multi-slider__btn-left:active::before {
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
 }
 
 .multi-slider__btn-right:active,
 .multi-slider__btn-left:active {
-  background-color: var(--c-landing-active);
+  background-color: #0901df;
 }
 
 @media (max-width: 991px) {
@@ -595,19 +553,19 @@ body {
   font-size: 0;
 
   background-color: rgba(0, 0, 0, 0);
-  border: solid 1px var(--c-landing-highlight);
+  border: solid 1px #3f36ff;
   border-radius: 50%;
 }
 
 .single-slider__btn:hover {
-  background-color: var(--c-landing-highlight);
+  background-color: #3f36ff;
   border: 2px solid white;
   margin-top: 24px;
 }
 
 .single-slider__btn:active {
-  background-color: var(--c-landing-active);
-  border: solid 2px var(--c-landing-active);
+  background-color: #0901df;
+  border: solid 2px #0901df;
   margin-top: 24px;
 }
 
@@ -615,8 +573,8 @@ body {
 .single-slider__btn--active,
 .single-slider__btn--active:hover,
 .single-slider__btn--active:active {
-  background-color: var(--c-landing-highlight);
-  border: solid 1px var(--c-landing-highlight);
+  background-color: #3f36ff;
+  border: solid 1px #3f36ff;
   cursor: default;
 }
 
@@ -690,8 +648,8 @@ body {
 .instruction__text {
   margin: 16px;
 
-  font-family: var(--roboto);
-  color: var(--c-landing-instruction-main-color);
+  font-family: 'Roboto', sans-serif;
+  color: #4e526e;
 }
 
 .instruction__heading {
@@ -705,7 +663,7 @@ body {
 }
 
 .instruction__text {
-  font-family: var(--roboto);
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 22px;
 }
@@ -731,7 +689,7 @@ body {
 
   font-weight: 700;
   line-height: 26px;
-  font-family: var(--roboto);
+  font-family: 'Roboto', sans-serif;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -762,8 +720,8 @@ so to undo custom designing of centration comment icon section above */
   padding: 18px 16px 18px;
 
   font-weight: 500;
-  font-family: var(--roboto);
-  color: var(--c-landing-highlight);
+  font-family: 'Roboto', sans-serif;
+  color: #3f36ff;
 
   border-radius: 0 0 2px 2px;
   cursor: pointer;
@@ -771,18 +729,18 @@ so to undo custom designing of centration comment icon section above */
 
 .instruction__curiosity-link:hover,
 .instruction__curiosity-link:focus:hover {
-  color: var(--c-landing-main-bg-color);
+  color: #fff;
   text-decoration: none;
 
-  background-color: var(--c-landing-highlight);
+  background-color: #3f36ff;
 }
 
 .instruction__curiosity-link:active,
 .instruction__curiosity-link:focus:active {
-  color: var(--c-landing-main-bg-color);
+  color: #fff;
   text-decoration: none;
 
-  background-color: var(--c-landing-active);
+  background-color: #0901df;
 }
 
 .instruction--backwords {
@@ -806,7 +764,7 @@ so to undo custom designing of centration comment icon section above */
   width: 100%;
   height: 1px;
 
-  background-color: var(--c-landing-muted-color-2);
+  background-color: rgba(33, 33, 33, 0.2);
 }
 
 @media (max-width: 500px) {
@@ -838,12 +796,12 @@ so to undo custom designing of centration comment icon section above */
 .category-list__heading,
 .category-list__name {
   font-size: 14px;
-  font-family: var(--roboto);
+  font-family: 'Roboto', sans-serif;
   text-align: left;
 }
 
 .category-list__heading {
-  color: var(--c-landing-instruction-main-color);
+  color: #4e526e;
   padding-right: 22px;
   margin: 0;
 }
@@ -852,7 +810,7 @@ so to undo custom designing of centration comment icon section above */
   padding-right: 16px;
 
   text-align: left;
-  color: var(--c-landing-muted-color-5);
+  color: rgba(33, 33, 33, 0.5);
 }
 
 /* End of category-list section */
@@ -901,7 +859,7 @@ so to undo custom designing of centration comment icon section above */
   height: 35px;
   margin-top: 8px;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
   border: 2px solid black;
   opacity: 0.2;
 }
@@ -935,7 +893,7 @@ so to undo custom designing of centration comment icon section above */
 .c-landing__header {
   min-height: 60px;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
 }
 
 .menu li {
@@ -944,14 +902,14 @@ so to undo custom designing of centration comment icon section above */
 
 .menu__item,
 .menu__item:focus {
-  font-family: var(--open-sans);
-  color: var(--c-landing-main-color);
+  font-family: 'Open Sans', sans-serif;
+  color: #100d40;
   text-decoration: none;
 }
 
 .menu__item--active {
   font-weight: 700;
-  color: var(--c-landing-highlight);
+  color: #3f36ff;
 
   cursor: default;
 }
@@ -960,13 +918,13 @@ so to undo custom designing of centration comment icon section above */
 
 .menu__item:hover,
 .menu__item:active:hover {
-  color: var(--c-landing-highlight);
+  color: #3f36ff;
   text-decoration: none;
 }
 
 .menu__item:active,
 .menu__item:active:focus {
-  color: var(--c-landing-active);
+  color: #0901df;
 }
 
 /* End of Menu links section */
@@ -1011,7 +969,7 @@ so to undo custom designing of centration comment icon section above */
   margin: 0;
   padding: 0;
 
-  border-top: 4px solid var(--c-landing-semi-bg-color);
+  border-top: 4px solid #f7f8fa;
   }
 
   .navbar-collapse {
@@ -1025,17 +983,17 @@ so to undo custom designing of centration comment icon section above */
   .navbar-nav > li > .menu__item {
   padding-left: 75px;
 
-  border-bottom: 2px solid var(--c-landing-semi-bg-color);
+  border-bottom: 2px solid #f7f8fa;
   }
 
   .navbar-nav > li > .menu__item:hover:not(.menu__item--active) {
-  background-color: var(--c-landing-semi-bg-color);
-  border-bottom: 2px solid var(--c-landing-highlight);
+  background-color: #f7f8fa;
+  border-bottom: 2px solid #3f36ff;
   }
 
   .navbar-nav > li > .menu__item:active:not(.menu__item--active) {
-  background-color: var(--c-landing-semi-bg-color);
-  border-bottom: 2px solid var(--c-landing-highlight);
+  background-color: #f7f8fa;
+  border-bottom: 2px solid #3f36ff;
   opacity: 0.75;
   }
 }
@@ -1082,7 +1040,7 @@ so to undo custom designing of centration comment icon section above */
 
 .main-info__btn.c-btn-with-icon {
   padding-right: 20px;
-  padding-left: calc(28px + var(--c-sm-icons-width));
+  padding-left: calc(28px + 22px);
 }
 
 .main-info__btn.c-btn-with-icon::after {
@@ -1165,7 +1123,7 @@ so to undo custom designing of centration comment icon section above */
   padding-top: 80px;
   padding-bottom: 38px;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
 }
 
 .cons__item {
@@ -1179,7 +1137,7 @@ so to undo custom designing of centration comment icon section above */
 .cons__text {
   font-size: 18px;
   line-height: 24px;
-  color: var(--c-landing-main-color-9);
+  color: rgba(16, 13, 64, 0.9);
 }
 
 @media (max-width: 1199px) {
@@ -1208,7 +1166,7 @@ so to undo custom designing of centration comment icon section above */
   padding-top: 61px;
   padding-bottom: 101px;
 
-  background-color: var(--c-landing-semi-bg-color);
+  background-color: #f7f8fa;
 }
 
 .features__heading {
@@ -1228,16 +1186,16 @@ so to undo custom designing of centration comment icon section above */
 
   font-size: 20px;
   line-height: 24px;
-  font-family: var(--roboto-slab);
+  font-family: 'Roboto Slab', serif;
   text-align: center;
-  color: var(--c-landing-highlight);
+  color: #3f36ff;
 }
 
 .features__item-text {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: var(--c-landing-main-color-9);
+  color: rgba(16, 13, 64, 0.9);
 }
 
 @media (max-width: 991px) {
@@ -1268,7 +1226,7 @@ so to undo custom designing of centration comment icon section above */
   }
 
   .features .c-landing-icon-lg::after {
-    top: calc(50% - calc(var(--c-lg-icons-height) / 2));
+    top: calc(50% - calc(100px / 2));
     left: 15px;
   }
 }
@@ -1281,7 +1239,7 @@ so to undo custom designing of centration comment icon section above */
   padding-top: 63px;
   padding-bottom: 63px;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
 }
 
 .agitation__heading {
@@ -1302,12 +1260,12 @@ so to undo custom designing of centration comment icon section above */
 
   font-size: 16px;
   line-height: 29px;
-  color: var(--c-landing-main-color-9);
+  color: rgba(16, 13, 64, 0.9);
 }
 
 .agitation__btn {
   margin-top: 30px;
-  padding: 13px 20px 15px calc(var(--c-sm-icons-width) + 20px);
+  padding: 13px 20px 15px calc(22px + 20px);
 }
 
 .agitation__btn.c-btn-with-icon::after {
@@ -1372,7 +1330,7 @@ so to undo custom designing of centration comment icon section above */
 
   padding: 80px 193px 181px 228px;
 
-  background-color: var(--c-landing-semi-bg-color);
+  background-color: #f7f8fa;
 }
 
 .staff__heading {
@@ -1460,7 +1418,7 @@ so to undo custom designing of centration comment icon section above */
   width: 201px;
   height: 293px;
 
-  border: solid 1px var(--c-landing-highlight);
+  border: solid 1px #3f36ff;
 }
 
 .personal-card__img-wrapper::after {
@@ -1474,7 +1432,7 @@ so to undo custom designing of centration comment icon section above */
   width: 160px;
   height: 1px;
 
-  border: solid 1px var(--c-landing-semi-bg-color);
+  border: solid 1px #f7f8fa;
 }
 
 .personal-card__name {
@@ -1485,7 +1443,7 @@ so to undo custom designing of centration comment icon section above */
 
 .personal-card__name-wrapper {
   /* Name-wrapper is an insurance in the thing that how long would be the worker's name it wouldn't destroy markup */
-  background-color: var(--c-landing-semi-bg-color);
+  background-color: #f7f8fa;
 }
 
 .personal-card__text {
@@ -1618,7 +1576,7 @@ so to undo custom designing of centration comment icon section above */
 .user-role__block {
   max-width: 1032px;
 
-  background-color: var(--c-landing-semi-bg-color);
+  background-color: #f7f8fa;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.2);
           box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.2);
@@ -1653,7 +1611,7 @@ so to undo custom designing of centration comment icon section above */
   width: 100%;
   height: 100%;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
   border-radius: 4px 4px 0 0;
   -webkit-box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
           box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
@@ -1703,7 +1661,7 @@ so to undo custom designing of centration comment icon section above */
   font-size: 18px;
   line-height: 32px;
   text-align: left;
-  color: var(--c-landing-main-color-8);
+  color: rgba(16, 13, 64, 0.8);
 }
 
 .user-role__item::after {
@@ -1716,7 +1674,7 @@ so to undo custom designing of centration comment icon section above */
   width: 5px;
   height: 5px;
 
-  background-color: var(--c-landing-main-color-8);
+  background-color: rgba(16, 13, 64, 0.8);
   border-radius: 50%;
 }
 
@@ -1797,11 +1755,11 @@ so to undo custom designing of centration comment icon section above */
 
     border-right: 2px solid black;
     border-left: 2px solid black;
-    -webkit-border-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, var(--c-landing-semi-bg-color)), to(hsl(0, 0%, 81%))) 1;
-    -webkit-border-image: -webkit-linear-gradient(top, var(--c-landing-semi-bg-color) 20%, hsl(0, 0%, 81%)) 1;
-         -o-border-image:      -o-linear-gradient(top, var(--c-landing-semi-bg-color) 20%, hsl(0, 0%, 81%)) 1;
-            border-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, var(--c-landing-semi-bg-color)), to(hsl(0, 0%, 81%))) 1;
-            border-image:         linear-gradient(to bottom, var(--c-landing-semi-bg-color) 20%, hsl(0, 0%, 81%)) 1;
+    -webkit-border-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #f7f8fa), to(hsl(0, 0%, 81%))) 1;
+    -webkit-border-image: -webkit-linear-gradient(top, #f7f8fa 20%, hsl(0, 0%, 81%)) 1;
+         -o-border-image:      -o-linear-gradient(top, #f7f8fa 20%, hsl(0, 0%, 81%)) 1;
+            border-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #f7f8fa), to(hsl(0, 0%, 81%))) 1;
+            border-image:         linear-gradient(to bottom, #f7f8fa 20%, hsl(0, 0%, 81%)) 1;
   }
 
   .user-role__content-heading::after {
@@ -1815,7 +1773,7 @@ so to undo custom designing of centration comment icon section above */
     width: 100%;
     height: 100%;
 
-    background-color: var(--c-landing-semi-bg-color);
+    background-color: #f7f8fa;
   }
 
   .user-block__tab-wrapper {
@@ -1858,7 +1816,7 @@ so to undo custom designing of centration comment icon section above */
   #user-block__tab-btn-master:not(:checked) ~ .user-role__block-content > label[for="user-block__tab-btn-master"] .user-role__content-heading,
   #user-block__tab-btn-apprentice:not(:checked) ~ .user-role__block-content > label[for="user-block__tab-btn-apprentice"] .user-role__content-heading {
     font-size: 30px;
-    color: var(--c-landing-h3-color-7);
+    color: rgba(230, 129, 72, 0.7);
 
     border: none;
   }
@@ -1878,7 +1836,7 @@ so to undo custom designing of centration comment icon section above */
 /* Begin of Service-content-block section */
 
 .service-content {
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
   padding-top: 89px;
   padding-bottom: 127px;
 }
@@ -1899,17 +1857,17 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .service-content__category-list .category-list__heading {
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
-  color: var(--c-landing-main-color);
+  color: #100d40;
   padding-right: 12px;
 }
 
 .service-content__category-list .category-list__name {
-  font-family: var(--open-sans);
-  color: var(--c-landing-main-color);
+  font-family: 'Open Sans', sans-serif;
+  color: #100d40;
   font-size: 18px;
   line-height: 24px;
 }
@@ -2041,7 +1999,7 @@ so to undo custom designing of centration comment icon section above */
   margin-bottom: 33px;
   padding: 25px 26px 19px 130px;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 }
@@ -2066,7 +2024,7 @@ so to undo custom designing of centration comment icon section above */
   display: block;
   margin-bottom: 9px;
 
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   font-size: 17px;
   line-height: 24px;
   color: rgba(16, 13, 64, 0.7);
@@ -2166,7 +2124,7 @@ so to undo custom designing of centration comment icon section above */
 
   text-align: center;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 }
@@ -2189,7 +2147,7 @@ so to undo custom designing of centration comment icon section above */
   line-height: 46px;
   font-family: ver(--open-sans);
   text-align: center;
-  color: var(--gift-card-main-color);
+  color: #030f61;
   text-transform: uppercase;
 }
 
@@ -2220,7 +2178,7 @@ so to undo custom designing of centration comment icon section above */
   font-weight: 300;
   font-size: 18px;
   line-height: 24px;
-  color: var(--c-landing-main-color);
+  color: #100d40;
 }
 
 .gift-card__terms-text:first-of-type {
@@ -2240,7 +2198,7 @@ so to undo custom designing of centration comment icon section above */
 
   font-weight: 600;
   font-size: 55px;
-  color: var(--gift-card-highlight);
+  color: #0901df;
 
   -ms-flex-item-align: center;
 }
@@ -2253,7 +2211,7 @@ so to undo custom designing of centration comment icon section above */
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  color: var(--gift-card-main-color);
+  color: #030f61;
 }
 
 .gift-card__rewarding-item {
@@ -2317,7 +2275,7 @@ so to undo custom designing of centration comment icon section above */
   margin-bottom: 134px;
   padding-bottom: 67px;
 
-  background-color: var(--c-landing-semi-bg-color);
+  background-color: #f7f8fa;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 10px 0 rgba(45, 38, 77, 0.2);
           box-shadow: 0 0 10px 0 rgba(45, 38, 77, 0.2);
@@ -2334,7 +2292,7 @@ so to undo custom designing of centration comment icon section above */
   line-height: 46px;
   text-transform: none;
 
-  background-color: var(--c-landing-main-bg-color);
+  background-color: #fff;
   border-radius: 4px 4px 0 0;
   -webkit-box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
           box-shadow: 0 1px 2px 0 rgba(45, 38, 77, 0.1);
@@ -2373,8 +2331,8 @@ so to undo custom designing of centration comment icon section above */
 
   font-size: 18px;
   line-height: 25px;
-  font-family: var(--open-sans);
-  color: var(--c-landing-main-color);
+  font-family: 'Open Sans', sans-serif;
+  color: #100d40;
 }
 
 .tasks__list li:nth-last-of-type(odd) {
@@ -2397,9 +2355,9 @@ so to undo custom designing of centration comment icon section above */
   font-weight: 700;
   font-size: 22px;
   line-height: 25px;
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
-  color: var(--c-landing-highlight);
+  color: #3f36ff;
 
   counter-increment: li;
 }
@@ -2440,7 +2398,7 @@ so to undo custom designing of centration comment icon section above */
 
 .tasks__btn {
   padding-right: 40px;
-  padding-left: calc(44px + var(--c-sm-icons-width));
+  padding-left: calc(44px + 22px);
 }
 
 @media (max-width: 1499px) {
@@ -2518,7 +2476,7 @@ so to undo custom designing of centration comment icon section above */
 .footer {
   padding-top: 62px;
   padding-bottom: 76px;
-  background-color: var(--c-landing-footer-bg-color);
+  background-color: #2a2c92;
 }
 
 .footer__info {
@@ -2553,12 +2511,12 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .footer__heading {
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 35px;
   vertical-align: middle;
-  color: var(--c-landing-main-bg-color);
+  color: #fff;
   margin: 0;
 }
 
@@ -2568,16 +2526,16 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .footer__paragraph {
-  color: var(--c-landing-main-bg-color);
+  color: #fff;
   max-width: 310px;
   line-height: 20px;
 }
 
 .footer__contacts {
-  font-family: var(--open-sans);
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 14px;
-  color: var(--c-landing-main-bg-color);
+  color: #fff;
   border: none;
 }
 
@@ -2611,13 +2569,13 @@ so to undo custom designing of centration comment icon section above */
 .footer__social-links .social-links__item:focus,
 .footer__social-links .social-links__item:hover:focus {
   opacity: 0.75;
-  color: var(--c-landing-main-bg-color);
+  color: #fff;
   text-decoration: none;
 }
 
 .footer__social-links .social-links__item:active,
 .footer__social-links .social-links__item:active:focus {
-  color: var(--c-landing-main-bg-color);
+  color: #fff;
   text-decoration: none;
   opacity: 0.5;
 }
