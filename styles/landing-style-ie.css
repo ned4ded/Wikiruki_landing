@@ -92,18 +92,19 @@ body {
 }
 
 .c-landing__heading-2::after {
-  --h2-underline: 100px;
-
   content: "";
   position: absolute;
   bottom: 0;
-  left: calc(50% - calc(var(--h2-underline) / 2));
+  left: 50%;
 
   display: block;
-  width: var(--h2-underline);
+  width: 100px;
   height: 3px;
 
   background-color: #e68148;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .c-landing__heading-3 {
@@ -186,14 +187,17 @@ body {
   content: "";
   position: absolute;
   top: 0;
-  left: calc(50% - calc(100px / 2));
+  left: 50%;
 
   display: block;
   width: 100px;
   height: 100px;
-
   /*background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;*/
+
   background: rgba(0, 0, 0, 0) url("../img/sprite.png") no-repeat left top;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 
 .c-icon-rock-hand::after {
@@ -351,7 +355,7 @@ body {
   position: relative;
 
   padding-right: 15px;
-  padding-left: calc(28px + 22px);
+  padding-left: 50px;
 }
 
 .c-btn-with-icon::after {
@@ -437,7 +441,7 @@ body {
 
 .multi-slider__btn-left {
   position: absolute;
-  top: calc(50% - 22px);
+  top: 50%;
   left: -74px;
 
   display: block;
@@ -450,11 +454,14 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #3f36ff;
   border-radius: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .multi-slider__btn-right {
   position: absolute;
-  top: calc(50% - 22px);
+  top: 50%;
   right: -74px;
 
   display: block;
@@ -467,15 +474,20 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #3f36ff;
   border-radius: 50%;
+  -webkit-transform: translate(0, -50%);
   -webkit-transform: rotate(200grad);
+      -ms-transform: translate(0, -50%);
       -ms-transform: rotate(200grad);
+          transform: translate(0, -50%);
           transform: rotate(200grad);
 }
+
 
 .multi-slider__btn-left::after,
 .multi-slider__btn-right::after {
   content: "";
   position: absolute;
+
   top: calc(50% - 2px);
   left: calc(50% - 2px);
 
@@ -1040,7 +1052,7 @@ so to undo custom designing of centration comment icon section above */
 
 .main-info__btn.c-btn-with-icon {
   padding-right: 20px;
-  padding-left: calc(28px + 22px);
+  padding-left: 50px;
 }
 
 .main-info__btn.c-btn-with-icon::after {
@@ -1226,8 +1238,12 @@ so to undo custom designing of centration comment icon section above */
   }
 
   .features .c-landing-icon-lg::after {
-    top: calc(50% - calc(100px / 2));
+    top: 50%;
     left: 15px;
+
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 
@@ -1252,6 +1268,9 @@ so to undo custom designing of centration comment icon section above */
 .agitation__heading::after {
   bottom: 8px;
   left: 0;
+  /* IDK why, but left property in this block doesnt work in IE and Edge, i have to use -ms-translate to fix this */
+
+  -ms-transform: translate(0, 0);
 }
 
 .agitation__block p {
@@ -1265,7 +1284,7 @@ so to undo custom designing of centration comment icon section above */
 
 .agitation__btn {
   margin-top: 30px;
-  padding: 13px 20px 15px calc(22px + 20px);
+  padding: 13px 20px 15px 42px;
 }
 
 .agitation__btn.c-btn-with-icon::after {
@@ -1590,14 +1609,14 @@ so to undo custom designing of centration comment icon section above */
 
   margin-bottom: 50px;
   padding-top: 32px;
-  padding-bottom: var(--user-role-heading-p-b);
+  padding-bottom: 50px;
 
   font-size: 24px;
   line-height: 46px;
 }
 
 .user-role__heading::after {
-  bottom: calc(var(--user-role-heading-p-b) - 20px);
+  bottom: calc(50px - 20px);
 }
 
 .user-role__heading::before {
@@ -2102,6 +2121,9 @@ so to undo custom designing of centration comment icon section above */
 
 .gifts__heading::after {
   left: 15px;
+  /* IDK why, but left property in this block doesnt work in IE and Edge, i have to use -ms-translate to fix this */
+
+  -ms-transform: translate(0, 0);
 }
 
 .gifts__list {
@@ -2287,7 +2309,7 @@ so to undo custom designing of centration comment icon section above */
   display: block;
   margin-bottom: 298px;
   padding-top: 40px;
-  padding-bottom: var(--tasks-heading-p-b);
+  padding-bottom: 54px;
 
   line-height: 46px;
   text-transform: none;
@@ -2299,7 +2321,7 @@ so to undo custom designing of centration comment icon section above */
 }
 
 .tasks__heading::after {
-  bottom: calc(var(--tasks-heading-p-b) - 20px);
+  bottom: calc(54px - 20px);
 }
 
 .tasks__heading::before {
