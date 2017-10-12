@@ -1939,6 +1939,7 @@ so to undo custom designing of centration comment icon section above */
   }
 
   .service-content__slider .single-slider__btn-group {
+    display: block;
     text-align: center;
   }
 }
