@@ -470,6 +470,10 @@ body {
   margin-top: 25px;
 }
 
+.multi-slider__item:focus {
+  outline: none;
+}
+
 .multi-slider__btn-right {
   position: absolute;
   top: 50%;
@@ -555,12 +559,6 @@ body {
   outline: none;
 }
 
-@media (max-width: 991px) {
-  .multi-slider__item--active:not(.multi-slider__item--active-single) {
-    display: none;
-  }
-}
-
 /* End of Multi-slider-block section */
 
 /* Begin of Single-slider-block section */
@@ -612,10 +610,6 @@ body {
   background-color: #3f36ff;
   border: solid 1px #3f36ff;
   cursor: default;
-}
-
-.single-slider__item:not(.single-slider__item--active) {
-  display: none;
 }
 
 @media (max-width: 500px) {
@@ -1404,7 +1398,7 @@ so to undo custom designing of centration comment icon section above */
   position: relative;
   z-index: 1;
 
-  width: 199px;
+  width: 203px;
   margin-bottom: 13px;
 }
 
@@ -1575,25 +1569,6 @@ so to undo custom designing of centration comment icon section above */
 
   .personal-card__img-wrapper::after {
     left: 20px;
-  }
-
-  .staff__slider .multi-slider__item--active-single .personal-card__img-wrapper::before {
-    left: calc(50% - 120px);
-
-    width: 240px;
-  }
-
-  .staff__slider .multi-slider__item--active-single .personal-card__img-wrapper::after {
-    right: auto;
-  }
-
-  .staff__slider .multi-slider__item--active:last-of-type .personal-card__img-wrapper::before {
-    left: -20px;
-  }
-
-  .staff__slider .multi-slider__item--active:last-of-type .personal-card__img-wrapper::after {
-    right: 19px;
-    left: auto;
   }
 
   .personal-card__text {
@@ -1898,7 +1873,7 @@ so to undo custom designing of centration comment icon section above */
 
 .service-content__category-list {
   text-align: center;
-  margin-bottom: 72px;
+  margin-bottom: 62px;
 }
 
 .service-content__category-list .category-list__heading {
@@ -1940,10 +1915,6 @@ so to undo custom designing of centration comment icon section above */
 @media (max-width: 1499px) {
   .service-content {
     padding-bottom: 90px;
-  }
-
-  .service-content__slider .multi-slider__item--active:not(.multi-slider__item--active-single) {
-    display: none;
   }
 
   .service-content__slider .multi-slider__item {
@@ -1994,6 +1965,10 @@ so to undo custom designing of centration comment icon section above */
 }
 
 @media (max-width: 500px) {
+  .service-content {
+    padding-bottom: 50px;
+  }
+
   .service-content__slider .multi-slider__btn-right,
   .service-content__slider .multi-slider__btn-left {
     display: none;
@@ -2167,7 +2142,7 @@ so to undo custom designing of centration comment icon section above */
 
 .gift-card {
   width: 355px;
-  margin: auto;
+  margin: 5px auto;
 
   text-align: center;
 
@@ -2179,10 +2154,6 @@ so to undo custom designing of centration comment icon section above */
 /* This block regulate working arrange of single slider in dependence with responsive design */
 .gifts__gift-card.single-slider__item {
   display: block;
-}
-
-.gifts__slider .single-slider__btn-group {
-  display: none;
 }
 
 .gift-card__gift-anouncment-text {
