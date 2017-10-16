@@ -420,6 +420,9 @@ body {
 .multi-slider__item {
   padding: 0 25px;
   margin-top: 25px;
+  &:focus {
+    outline: none;
+  }
 }
 
 .multi-slider__btn-right {
@@ -1422,27 +1425,6 @@ so to undo custom designing of centration comment icon section above */
   .personal-card__img-wrapper {
     &::before, &::after {
       left: 20px;
-    }
-  }
-  /*ANCHOR*/
-  .staff__slider {
-    .multi-slider__item--active-single .personal-card__img-wrapper {
-      &::before {
-        left: calc(50% - 120px);
-        width: 240px;
-      }
-      &::after {
-        right: auto;
-      }
-    }
-    .multi-slider__item--active:last-of-type .personal-card__img-wrapper {
-      &::before {
-        left: -20px;
-      }
-      &::after {
-        right: 19px;
-        left: auto;
-      }
     }
   }
   .personal-card__text {
