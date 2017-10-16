@@ -31,7 +31,8 @@ body {
 .multi-slider__slides,
 .personal-card__link-list,
 .user-reviews,
-.gifts__list {
+.gifts__list,
+.single-slider__btn-group {
   padding: 0;
 
   list-style: none;
@@ -42,7 +43,8 @@ body {
 .social-links,
 .single-slider__slides,
 .personal-card__link-list,
-.gifts__list {
+.gifts__list,
+.single-slider__btn-group {
   margin: 0;
 }
 
@@ -555,8 +557,11 @@ body {
   text-align: center;
 }
 
-.single-slider__btn {
+.single-slider__btn-group > li {
   display: inline-block;
+}
+
+.single-slider__btn-group > li > button {
   width: 10px;
   height: 10px;
   padding: 0;
@@ -569,22 +574,27 @@ body {
   border-radius: 50%;
 }
 
-.single-slider__btn:hover {
+
+.single-slider__btn-group > li:hover  > button{
   background-color: #3f36ff;
   border: 2px solid white;
   margin-top: 24px;
 }
 
-.single-slider__btn:active {
+.single-slider__btn-group > li:active > button {
   background-color: #0901df;
   border: solid 2px #0901df;
   margin-top: 24px;
 }
 
+.single-slider__btn-group > li > button:focus {
+  outline: none;
+}
 
-.single-slider__btn--active,
-.single-slider__btn--active:hover,
-.single-slider__btn--active:active {
+
+.single-slider__btn-group > .slick-active > button,
+.single-slider__btn-group > .slick-active:hover > button,
+.single-slider__btn-group > .slick-active:active > button {
   background-color: #3f36ff;
   border: solid 1px #3f36ff;
   cursor: default;
@@ -1298,8 +1308,8 @@ so to undo custom designing of centration comment icon section above */
   text-align: left;
 }
 
-.agitation-single-slider .single-slider__btn-group {
-  margin-right: 35px;
+.agitation-single-slider .single-slider__image {
+  margin: auto;
 }
 
 @media (max-width: 1199px) {
@@ -2147,10 +2157,11 @@ so to undo custom designing of centration comment icon section above */
 
 .gift-card {
   width: 355px;
+  margin: auto;
 
   text-align: center;
 
-  background-color: #fff;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 }

@@ -17,6 +17,7 @@
 
   <!-- landing page specific styles -->
   <link rel="stylesheet" href="styles/landing-style-ie.css" />
+  <link rel="stylesheet" href="styles/slick.css" />
 </head>
 
 <body>
@@ -42,7 +43,7 @@
     </nav>
   </header>
   <main class="c-landing__main container" role="main">
-    <div id="main-info" class="main-info row">
+    <!-- <div id="main-info" class="main-info row">
       <div class="main-info__block col-xs-12 col-md-6">
         <p class="c-landing__annotation">Энциклопедия практических знаний – помощь в решении повседневных задач</p>
         <h1 class="c-landing__heading">Добро пожаловать на <span class="c-landing__text-logo">WikiRuki</span></h1>
@@ -124,8 +125,8 @@
           </table>
         </section>
       </div>
-    </div>
-    <section>
+    </div> -->
+    <!-- <section>
       <h2 class="hidden">Преимущества</h2>
       <div class="cons row">
         <div class="cons__item col-md-6 col-lg-3">
@@ -167,19 +168,20 @@
           <p class="c-landing__main-text features__item-text">позволит получить больше возможностей сервиса</p>
         </li>
       </ul>
-    </section>
+    </section> -->
     <section id="agitation" class="agitation row">
       <div class="col-lg-5 col-md-6 col-sm-12">
         <div class="single-slider agitation-single-slider">
           <ul class="single-slider__slides">
             <li class="single-slider__item single-slider__item--active"><img src="img/aggitation-slider-slide1.png" alt="Девушки режут овощи" class="single-slider__image" width="432" height="480"></li>
-            <li class="single-slider__item hidden"><img src="https://via.placeholder.com/426x474" alt="Девушки режут овощи" class="single-slider__image"></li>
+            <li class="single-slider__item single-slider__item--active"><img src="https://via.placeholder.com/426x474" alt="Девушки режут овощи" class="single-slider__image"></li>
+            <li class="single-slider__item single-slider__item--active"><img src="https://via.placeholder.com/426x474/00000" alt="Девушки режут овощи" class="single-slider__image"></li>
           </ul>
-          <div class="single-slider__btn-group">
+          <!-- <div class="single-slider__btn-group">
             <button class="single-slider__btn" type="button" name="button">Первый слайд</button>
             <button class="single-slider__btn single-slider__btn--active" type="button" name="button">Второй слайд</button>
             <button class="single-slider__btn" type="button" name="button">Третий слайд</button>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="col-lg-7 col-md-6 col-xs-12">
@@ -189,6 +191,7 @@
           <p class="c-landing__main-text"><span class="c-landing__main-bold-text">Регистрируйтесь!</span> И вы увидите, что наш портал затрагивает все возможные сферы деловой деятельности, домашнего быта и хобби современного человека.</p>
           <a href="#" class="c-btn agitation__btn c-btn-with-icon c-landing-icon-sm c-icon-rock-hand">Поделиться опытом</a>
         </div>
+
       </div>
     </section>
     <section id="staff" class="staff row">
@@ -240,7 +243,7 @@
         <button class="multi-slider__btn-right " type="button" name="button">&#8658;</button>
       </div>
     </section>
-    <section id="user-role" class="user-role row">
+    <!-- <section id="user-role" class="user-role row">
       <div class="col-xs-12">
         <div class="user-role__block container-fluid">
           <div class="row">
@@ -248,7 +251,7 @@
           </div>
           <div class="row">
             <!-- btns used for tabbing this section on 767px -->
-            <input id="user-block__tab-btn-apprentice" class="user-block__tab" type="radio" name="gender" value="apprentice" checked>
+            <!-- <input id="user-block__tab-btn-apprentice" class="user-block__tab" type="radio" name="gender" value="apprentice" checked>
             <input id="user-block__tab-btn-master" class="user-block__tab" type="radio" name="gender" value="master">
             <div class="user-role__block-content col-sm-6 col-xs-12">
               <label for="user-block__tab-btn-apprentice">
@@ -281,9 +284,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="service-content row">
-      <div class=" col-xs-12">
+      <div class="col-xs-12">
         <h2 class="c-landing__heading-2 service-content__heading">Новые инструкции от наших опытных мастеров Ежедневно!</h2>
       </div>
       <div class="col-xs-12">
@@ -351,7 +354,7 @@
         <button class="multi-slider__btn-right" type="button" name="button">Вперед</button>
       </div>
     </section>
-    <ul id="user-reviews" class="user-reviews row">
+    <!-- <ul id="user-reviews" class="user-reviews row">
       <h2 class="c-landing__heading-2 user-reviews__heading col-xs-12">О чем говорят мастера и ученики портала <span class="c-landing__text-logo">WikiRuki</span></h2>
       <li class="review-card user-reviews__item col-xs-12">
         <img src="img/comment-photo-1.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
@@ -393,53 +396,54 @@
           "Начала изучать web дизайн. И на этом портале нашла для себя очень много полезного и интересного. Благодаря помощи мастеров уже беру первые заказы, результат выполнения которых нравится клиентам."
         </p>
       </li>
-    </ul>
+    </ul> -->
     <section class="gifts row">
       <h2 class="c-landing__heading-2 gifts__heading col-xs-12">Получи подарки за инструкции</h2>
       <div class="single-slider gifts__slider col-xs-12">
         <ul class="gifts__list single-slider__slides">
-          <li class="gift-card gifts__gift-card single-slider__item">
-            <span class="gift-card__gift-anouncment-text">Подарок</span>
-            <p class="gift-card__terms">
-              <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
-              <!-- Pay attention: u have to resolve russion declension -->
-            </p>
-            <p class="gift-card__reward">
-              Получи в подарок <span class="gift-card__rewarding-item">футболку</span> с символикой wikiruki
-            </p>
-            <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+          <li class="gifts__gift-card single-slider__item">
+            <div class="gift-card">
+              <span class="gift-card__gift-anouncment-text">Подарок</span>
+              <p class="gift-card__terms">
+                <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
+                <!-- Pay attention: u have to resolve russion declension -->
+              </p>
+              <p class="gift-card__reward">
+                Получи в подарок <span class="gift-card__rewarding-item">футболку</span> с символикой wikiruki
+              </p>
+              <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+            </div>
           </li>
-          <li class="gift-card gifts__gift-card single-slider__item single-slider__item--active">
-            <span class="gift-card__gift-anouncment-text">Подарок</span>
-            <p class="gift-card__terms">
-              <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">3</span><span class="gift-card__terms-text">инструкций</span>
-              <!-- Pay attention: u have to resolve russion declension -->
-            </p>
-            <p class="gift-card__reward">
-              Получи в подарок <span class="gift-card__rewarding-item">кружку</span> с символикой wikiruki
-            </p>
-            <a href="#" class="c-btn gift-card__btn">Опубликовать</a>
+          <li class="gifts__gift-card single-slider__item single-slider__item--active">
+            <div class="gift-card">
+              <span class="gift-card__gift-anouncment-text">Подарок</span>
+              <p class="gift-card__terms">
+                <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">3</span><span class="gift-card__terms-text">инструкций</span>
+                <!-- Pay attention: u have to resolve russion declension -->
+              </p>
+              <p class="gift-card__reward">
+                Получи в подарок <span class="gift-card__rewarding-item">кружку</span> с символикой wikiruki
+              </p>
+              <a href="#" class="c-btn gift-card__btn">Опубликовать</a>
+            </div>
           </li>
-          <li class="gift-card gifts__gift-card single-slider__item">
-            <span class="gift-card__gift-anouncment-text">Подарок</span>
-            <p class="gift-card__terms">
-              <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">1</span><span class="gift-card__terms-text">инструкций</span>
-              <!-- Pay attention: u have to resolve russion declension -->
-            </p>
-            <p class="gift-card__reward">
-              Получи в подарок <span class="gift-card__rewarding-item">магнит</span> и значок с символикой wikiruki
-            </p>
-            <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+          <li class="gifts__gift-card single-slider__item">
+            <div class="gift-card">
+              <span class="gift-card__gift-anouncment-text">Подарок</span>
+              <p class="gift-card__terms">
+                <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">1</span><span class="gift-card__terms-text">инструкций</span>
+                <!-- Pay attention: u have to resolve russion declension -->
+              </p>
+              <p class="gift-card__reward">
+                Получи в подарок <span class="gift-card__rewarding-item">магнит</span> и значок с символикой wikiruki
+              </p>
+              <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+            </div>
           </li>
         </ul>
-        <div class="single-slider__btn-group">
-          <button class="single-slider__btn" type="button" name="button">Первый слайд</button>
-          <button class="single-slider__btn single-slider__btn--active" type="button" name="button">Второй слайд</button>
-          <button class="single-slider__btn" type="button" name="button">Третий слайд</button>
-        </div>
       </div>
     </section>
-    <section id="tasks" class="tasks row">
+    <!-- <section id="tasks" class="tasks row">
       <div class="tasks__block container-fluid">
         <div class="row">
           <h2 class="c-landing__heading-2 tasks__heading col-xs-12">
@@ -462,9 +466,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
   </main>
-  <footer id="contacts" class="footer c-landing__footer container">
+  <!-- <footer id="contacts" class="footer c-landing__footer container">
     <div class="row">
       <section class="footer__info col-lg-5 col-xs-12">
         <img src="img/logo-white.png" alt="Логотип Wikiruki: символика компании на синем фоне" class="logo footer__logo" width="194" height="35" />
@@ -504,10 +508,12 @@
         </ul>
       </section>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="js/jquery-3.1.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/landing-self.js"></script>
 </body>
 
 </html>
