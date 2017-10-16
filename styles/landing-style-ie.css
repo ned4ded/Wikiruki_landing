@@ -461,6 +461,15 @@ body {
           transform: translate(0, -50%);
 }
 
+.multi-slider__slides {
+  margin: 0 -25px;
+}
+
+.multi-slider__item {
+  padding: 0 25px;
+  margin-top: 25px;
+}
+
 .multi-slider__btn-right {
   position: absolute;
   top: 50%;
@@ -539,6 +548,11 @@ body {
 .multi-slider__btn-right:active,
 .multi-slider__btn-left:active {
   background-color: #0901df;
+}
+
+.multi-slider__btn-left:focus,
+.multi-slider__btn-right:focus {
+  outline: none;
 }
 
 @media (max-width: 991px) {
@@ -1903,12 +1917,8 @@ so to undo custom designing of centration comment icon section above */
   line-height: 24px;
 }
 
-.multi-slider__slides {
-  margin: 0 -25px;
-}
-
-.multi-slider__item {
-  padding: 0 25px;
+.service-content__slider .instruction {
+  margin-bottom: 5px;
 }
 
 .service-content__slider .instruction__category-list {
