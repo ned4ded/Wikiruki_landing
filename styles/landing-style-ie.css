@@ -456,9 +456,6 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #3f36ff;
   border-radius: 50%;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
 }
 
 .multi-slider__slides {
@@ -489,11 +486,8 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #3f36ff;
   border-radius: 50%;
-  -webkit-transform: translate(0, -50%);
   -webkit-transform: rotate(200grad);
-      -ms-transform: translate(0, -50%);
       -ms-transform: rotate(200grad);
-          transform: translate(0, -50%);
           transform: rotate(200grad);
 }
 
@@ -1493,17 +1487,17 @@ so to undo custom designing of centration comment icon section above */
   line-height: 24px;
 }
 
-.staff .multi-slider__btn-right,
-.staff .multi-slider__btn-left {
-  top: 101px;
-}
-
 .staff .multi-slider__btn-right {
   right: -32px;
 }
 
 .staff .multi-slider__btn-left {
   left: -80px;
+}
+
+.staff .multi-slider__btn-right,
+.staff .multi-slider__btn-left {
+  top: 30%;
 }
 
 @media (max-width: 1499px) {
