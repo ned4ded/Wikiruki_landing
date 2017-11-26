@@ -634,7 +634,8 @@ body {
   .user-reviews,
   .gifts,
   .tasks,
-  .c-landing__footer > .row {
+  .c-landing__header > nav,
+  .c-landing__footer {
     padding-right: 119px;
     padding-left: 119px;
   }
@@ -665,6 +666,7 @@ body {
 
 .instruction__image {
   border-radius: 2px 2px 0 0;
+  object-fit: cover;
 }
 
 .instruction__heading,
@@ -765,13 +767,6 @@ so to undo custom designing of centration comment icon section above */
   text-decoration: none;
 
   background-color: #0901df;
-}
-
-.instruction--backwords {
-  -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
-  opacity: 0.6;
 }
 
 .instruction__separate-line {
@@ -1033,13 +1028,19 @@ so to undo custom designing of centration comment icon section above */
   z-index: 0;
 
   padding-top: 218px;
-  padding-bottom: 225px;
+  padding-bottom: 125px;
+}
 
-  background: #f6efe5 url(../img/advantage-bg.png) no-repeat bottom left;
+.main-info__bg {
+  background: #f6efe5 url(../img/advantage-bg.png) no-repeat left bottom;
+  background-size: cover;
+
+  overflow: hidden;
 }
 
 .main-info__instruction-wrapper {
   position: relative;
+  height: 430px;
 }
 
 .main-info__block .c-landing__main-text {
@@ -1051,16 +1052,144 @@ so to undo custom designing of centration comment icon section above */
   margin-bottom: 33px;
 }
 
-.main-info__instruction {
-  margin: auto;
+@keyframes replace-out {
+   25% {
+    left: -10%;
+    right: auto;
+    transform: translate(10%, -50%) scale(0.9);
+    opacity: 0.5;
+    z-index: 1;
+    visibility: visible;
+   }
+
+   50% {
+     left: 50%;
+     right: auto;
+     transform: translate(-50%, -50%) scale(0.8);
+     opacity: 0;
+     z-index: 1;
+     visibility: hidden;
+   }
+
+   100% {
+     left: 50%;
+     right: auto;
+     transform: translate(-50%, -50%) scale(0.8);
+     opacity: 0;
+     z-index: 1;
+     visibility: hidden;
+   }
 }
 
-.main-info__instruction.instruction--backwords {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-}
+  @keyframes replace-in {
+   25% {
+    right: -10%;
+    left: auto;
+    transform: translate(10%, -50%) scale(0.9);
+    opacity: 0.8;
+    z-index: 2;
+   }
+
+   50% {
+     right: 50%;
+     left: auto;
+     transform: translate(50%, -50%) scale(1);
+     opacity: 1;
+     z-index: 2;
+   }
+
+   100% {
+     right: 50%;
+     left: auto;
+     transform: translate(50%, -50%) scale(1);
+     opacity: 1;
+     z-index: 2;
+   }
+  }
+
+  @keyframes replace-fraud {
+    25% {
+     visibility: hidden;
+     left: auto;
+     right: 50%;
+     transform: translate(50%, -50%) scale(0.8);
+     opacity: 0;
+     z-index: 0;
+    }
+
+    50% {
+      visibility: hidden;
+      left: auto;
+      right: 50%;
+      transform: translate(50%, -50%) scale(0.8);
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    100% {
+      visibility: visible;
+      left: auto;
+      right: 0;
+      transform: translate(0, -50%) scale(0.8);
+      opacity: 0.6;
+      z-index: 0;
+    }
+  }
+
+  .replace {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .replace.out {
+    animation-name: replace-out;
+    animation-timing-function: linear;
+  }
+
+  .replace.in {
+    animation-name: replace-in;
+    animation-timing-function: ease-out;
+  }
+
+  .replace.fraud {
+    animation-name: replace-fraud;
+    animation-timing-function: ease-out;
+
+    visibility: hidden;
+  }
+
+  .main-info__instruction {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  .main-info__instruction--active {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    opacity: 1;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+  }
+
+  .main-info__instruction--active.instruction--backwards {
+    left: auto;
+    right: 0;
+    z-index: 1;
+    -webkit-transform: translate(0, -50%) scale(0.8);
+    -ms-transform: translate(0, -50%) scale(0.8);
+    transform: translate(0, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+
 
 .main-info__btn.c-btn-with-icon {
   padding-right: 20px;
@@ -1189,7 +1318,9 @@ so to undo custom designing of centration comment icon section above */
   margin-bottom: 0;
   padding-top: 61px;
   padding-bottom: 101px;
+}
 
+.features__bg {
   background-color: #f7f8fa;
 }
 
@@ -1312,6 +1443,7 @@ so to undo custom designing of centration comment icon section above */
 
 .agitation-single-slider .single-slider__image {
   margin: auto;
+  object-fit: cover;
 }
 
 @media (max-width: 1199px) {
@@ -1362,9 +1494,12 @@ so to undo custom designing of centration comment icon section above */
   z-index: 0;
 
   padding: 80px 193px 181px 228px;
-
-  background-color: #f7f8fa;
 }
+
+.staff__bg {
+   background-color: #f7f8fa;
+ }
+
 
 .staff__heading {
   margin-bottom: 19px;
@@ -1580,12 +1715,16 @@ so to undo custom designing of centration comment icon section above */
 
   padding-top: 90px;
   padding-bottom: 165px;
+}
 
+.user-role__bg {
   background: #f6efe5 url(../img/role-choice-bg.png) no-repeat bottom;
   /* to avoid adding another div and dimming the background a little */
   -webkit-box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
-          box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 500px 500px rgba(0, 0, 0, 0.1);
+  background-size: cover;
 }
+
 
 .user-role__block {
   max-width: 1032px;
@@ -1981,14 +2120,15 @@ so to undo custom designing of centration comment icon section above */
 .user-reviews {
   margin-bottom: 0;
   padding: 57px 169px 96px;
+}
 
+.user-reviews__bg {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebeafb));
   background-image: -webkit-linear-gradient(top, #ffffff, #ebeafb);
-  background-image:      -o-linear-gradient(top, #ffffff, #ebeafb);
-  background-image:         linear-gradient(to bottom, #ffffff, #ebeafb);
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-image: -o-linear-gradient(top, #ffffff, #ebeafb);
+  background-image: linear-gradient(to bottom, #ffffff, #ebeafb);
 }
+
 
 .user-reviews__heading {
   margin-bottom: 64px;
@@ -2099,10 +2239,14 @@ so to undo custom designing of centration comment icon section above */
   margin-bottom: 0;
   padding-top: 139px;
   padding-bottom: 155px;
-
-  background: rgb(250, 250, 250) url(../img/gifts-bg.png) no-repeat top right;
-  background-position: 0 -10px;
 }
+
+.gifts__bg {
+  background: rgb(250, 250, 250) url(/landing_images/gifts-bg.png) no-repeat top right;
+  background-position-y:-10px;
+  background-size: cover;
+}
+
 
 .gifts__heading {
   margin-bottom: 110px;
@@ -2114,9 +2258,9 @@ so to undo custom designing of centration comment icon section above */
   /* I have to use  translate, because left/bottom couldnt outrange .agitation__heading properties */
   left: 0;
 
-  -webkit-transform: translate(15px, 0);
-      -ms-transform: translate(15px, 0);
-          transform: translate(15px, 0);
+  -webkit-transform: translateY( 0);
+      -ms-transform: translateY( 0);
+          transform: translateY( 0);
 }
 
 .gifts__list {
@@ -2239,9 +2383,10 @@ so to undo custom designing of centration comment icon section above */
 @media (max-width: 1199px) {
   .gifts {
     padding-bottom: 100px;
+  }
 
-    background-color: #f6f6f4;
-    background-position: top center;
+  .gifts__bg {
+    background-size: contain;
   }
 
   .gifts__heading {
@@ -2270,6 +2415,11 @@ so to undo custom designing of centration comment icon section above */
   .gifts__slider .single-slider__btn-group {
     display: block;
   }
+
+  .gifts__bg {
+    background-size: cover;
+    background-position-x: 50%;
+  }
 }
 
 /* End of Gifts-block section */
@@ -2278,8 +2428,11 @@ so to undo custom designing of centration comment icon section above */
 
 .tasks {
   padding: 0 134px;
+}
 
+.tasks__bg {
   background: #e8e2e1 url(../img/mission-bg.png) no-repeat bottom center;
+  background-size: cover;
 }
 
 .tasks__block {
@@ -2488,8 +2641,12 @@ so to undo custom designing of centration comment icon section above */
 .footer {
   padding-top: 62px;
   padding-bottom: 76px;
+}
+
+.footer__bg {
   background-color: #2a2c92;
 }
+
 
 .footer__info {
   position: relative;
