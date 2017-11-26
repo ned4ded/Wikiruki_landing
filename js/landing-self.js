@@ -1,3 +1,73 @@
+const replaceAnim = (elemClassName, elemActiveName, elemBackName, animDelay, animName = 'replace') => {
+
+  console.log('anim begin');
+
+  const elementsList = () => $(`.${elemClassName}`);
+  const activeElements = () => $(`.${elemActiveName}`);
+
+  if(activeElements().length === 0 || $(`.${elemBackName}`).length === 0) {
+    return;
+  }
+
+  if(elementsList().not(activeElements()).length === 0) {
+    activeElements()
+      .clone()
+      .appendTo(activeElements().parent());
+
+    const deactivateElements = () => activeElements().eq(2);
+
+    while(deactivateElements().length !== 0) {
+      deactivateElements().removeClass(`${elemActiveName} ${elemBackName}`);
+    }
+  }
+
+  var curIndex = 2;
+  var elementsHovered = false;
+
+  elementsList().parent().hover(function() {
+    (elementsHovered) ? elementsHovered = false : elementsHovered = true;
+  });
+
+  const animDuration = $(`.${animName}`).css('animation-duration').match(/\d/) * 1000;
+  const anim = () => setTimeout(function() {
+    if(elementsHovered) {
+      return anim();
+    } else {
+      $(`.${elemActiveName}.${animName}:not(.${elemBackName})`).addClass('out');
+      $(`.${elemActiveName}.${animName}.${elemBackName}`).addClass('in');
+
+      elementsList()
+        .eq(curIndex)
+        .addClass(`${elemActiveName} ${elemBackName} fraud`);
+
+      curIndex = (curIndex === elementsList().length - 1) ? 0 : curIndex + 1;
+
+      setTimeout(function() {
+
+        $(`.${elemActiveName}.${animName}.fraud`).removeClass(`fraud`);
+        $(`.${elemActiveName}.${animName}.out`).removeClass(`out ${elemActiveName}`);
+        $(`.${elemActiveName}.${animName}.in`).removeClass(`in ${elemBackName}`);
+
+        anim();
+      }, animDuration);
+    }
+  }, animDelay);
+
+  anim();
+}
+
+const longestWord = (words) => {
+  return words.reduce((acc, word) => {
+    if(!(typeof(word) === 'string')) {
+      return;
+    }
+
+    const wordLength = word.length;
+
+    return (acc < wordLength)? wordLength : acc;
+  }, 0);
+}
+
 $(document).ready(function(){
   $('.agitation-single-slider > .single-slider__slides').slick({
     arrows: false,
@@ -7,11 +77,8 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 3000
   });
-});
 
-
-$(window).ready(function() {
-  if ( $(window).width() < 991 ) {
+  if( $(window).width() < 991 ) {
     $('.gifts__list').slick({
       arrows: false,
       dots: true,
@@ -19,9 +86,7 @@ $(window).ready(function() {
       dotsClass: 'single-slider__btn-group'
     });
   }
-});
 
-$(document).ready(function(){
   $('.staff__slider > .multi-slider__slides').slick({
     infinite: true,
     slidesToShow: 3,
@@ -40,13 +105,12 @@ $(document).ready(function(){
     }
     ]
   });
-});
 
-$(document).ready(function(){
   $('.service-content__slider > .multi-slider__slides').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoPlay: true,
     appendArrows: $('.service-content__slider'),
     prevArrow: '<button class="multi-slider__btn-left" type="button" name="button">&#8656;</button>',
     nextArrow: '<button class="multi-slider__btn-right" type="button" name="button">&#8656;</button>',
@@ -73,4 +137,7 @@ $(document).ready(function(){
       }
     ]
   });
+
+// Main-info instruction slider
+  replaceAnim('main-info__instruction', 'main-info__instruction--active', 'instruction--backwards', 3000);
 });

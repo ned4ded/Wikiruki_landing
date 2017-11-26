@@ -16,13 +16,13 @@
   <link rel="stylesheet" href="styles/bootstrap.css" />
 
   <!-- landing page specific styles -->
-  <link rel="stylesheet" href="styles/landing-style-ie.css" />
+  <link rel="stylesheet" href="styles/landing-style.css" />
 
   <!-- slick clider css -->
   <link rel="stylesheet" href="styles/slick.css" />
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar">
   <header class="c-landing__header navbar navbar-fixed-top c-landing__navbar">
     <nav class="container">
       <div class="navbar-header">
@@ -33,102 +33,106 @@
       </div>
       <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" role="navigation">
         <ul class="menu nav navbar-nav navbar-right">
-          <li><a href="#main-info" class="menu__item menu__item--active">О нас</a></li>
-          <li><a href="#agitation" class="menu__item">Смысл</a></li>
-          <li><a href="#staff" class="menu__item">Мастера</a></li>
-          <li><a href="#user-role" class="menu__item">Кто ты?</a></li>
-          <li><a href="#user-reviews" class="menu__item">Отзывы</a></li>
-          <li><a href="#tasks" class="menu__item">Миссия</a></li>
-          <li><a href="#contacts" class="menu__item">Контакты</a></li>
+          <li class="menu__item active"><a href="#main-info">О нас</a></li>
+          <li class="menu__item"><a href="#agitation">Смысл</a></li>
+          <li class="menu__item"><a href="#staff" >Мастера</a></li>
+          <li class="menu__item"><a href="#user-role" >Кто ты?</a></li>
+          <li class="menu__item"><a href="#user-reviews" >Отзывы</a></li>
+          <li class="menu__item"><a href="#tasks" >Миссия</a></li>
+          <li class="menu__item"><a href="#contacts" >Контакты</a></li>
         </ul>
       </div>
     </nav>
   </header>
-  <main class="c-landing__main container" role="main">
-    <div id="main-info" class="main-info row">
-      <div class="main-info__block col-xs-12 col-md-6">
-        <p class="c-landing__annotation">Энциклопедия практических знаний – помощь в решении повседневных задач</p>
-        <h1 class="c-landing__heading">Добро пожаловать на <span class="c-landing__text-logo">WikiRuki</span></h1>
-        <section>
-          <h2 class="hidden">О нас</h2>
-          <p class="c-landing__main-text">
-            Целью создания этого интернет-портала является желание помочь обычным пользователям, таким как вы, ваши друзья или родственники, решать повседневные, бытовые задачи.
-          </p>
-          <p class="c-landing__main-text">
-            На WikiRuki мастера делятся своим опытом, рассказывая, как правильно готовить, строить, чинить, программировать и многое-многое другое.
-          </p>
-          <p class="c-landing__main-text c-landing__main-bold-text">Вступайте в наше сообщество!</p>
-          <div>
-            <a href="#" class="c-btn c-empty-btn main-info__btn">Получить знания</a>
-            <a href="#" class="c-btn c-btn-with-icon main-info__btn c-landing-icon-sm c-icon-rock-hand">Поделиться опытом</a>
+  <main class="c-landing__main" role="main">
+    <div class="main-info__bg">
+      <div id="main-info" class="main-info container">
+        <div class="row">
+          <div class="main-info__block col-xs-12 col-md-6">
+            <p class="c-landing__annotation">Энциклопедия практических знаний – помощь в решении повседневных задач</p>
+            <h1 class="c-landing__heading">Добро пожаловать на <span class="c-landing__text-logo">WikiRuki</span></h1>
+            <section>
+              <h2 class="hidden">О нас</h2>
+              <p class="c-landing__main-text">
+                Целью создания этого интернет-портала является желание помочь обычным пользователям, таким как вы, ваши друзья или родственники, решать повседневные, бытовые задачи.
+              </p>
+              <p class="c-landing__main-text">
+                На WikiRuki мастера делятся своим опытом, рассказывая, как правильно готовить, строить, чинить, программировать и многое-многое другое.
+              </p>
+              <p class="c-landing__main-text c-landing__main-bold-text">Вступайте в наше сообщество!</p>
+              <div>
+                <a href="#" class="c-btn c-empty-btn main-info__btn">Получить знания</a>
+                <a href="#" class="c-btn c-btn-with-icon main-info__btn c-landing-icon-sm c-icon-rock-hand">Поделиться опытом</a>
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
-      <div class="main-info__instruction-wrapper col-xs-12 col-md-6 hidden-sm hidden-xs">
-        <section class="instruction main-info__instruction">
-          <img src="./img/instruction-avatar-pizza.png" alt="Изображение рецепта" class="instruction__image" width="350" height="200">
-          <h3 class="instruction__heading">Готовим правильный стейк дома. Инструкция</h3>
-          <span class="instruction__author">Александр Чуев</span>
-          <p class="instruction__text">Все магазинные стейки продаются в вакуумных упаковках по одному стейку, по два или кусками толщиной примерно в 2 хороших стейка...</p>
-          <ul class="category-list instruction__category-list">
-            <li class="">
-              <h4 class="category-list__heading">Категории:</h4>
-            </li>
-            <li class="category-list__name">Еда и напитки</li>
-            <li class="category-list__name">Кулинария</li>
-          </ul>
-          <table class="instruction__social instruction__separate-line">
-            <thead class="hidden">
-              <tr>
-                <th>Лайк</th>
-                <th>Дизлайк</th>
-                <th>Комментарии</th>
-                <th>Просмотры</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="c-landing-icon-sm c-landing-icon-like instruction__icon">123</td>
-                <td class="c-landing-icon-sm c-landing-icon-dislike instruction__icon">0</td>
-                <td class="c-landing-icon-sm c-landing-icon-comment instruction__icon">12</td>
-                <td class="c-landing-icon-sm c-landing-icon-visibility instruction__icon pull-right">1280</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-        <section class="instruction main-info__instruction instruction--backwords">
-          <img src="./img/instruction-avatar-pizza.png" alt="Изображение рецепта" class="instruction__image" width="350" height="200">
-          <h3 class="instruction__heading">Готовим правильный стейк дома. Инструкция</h3>
-          <span class="instruction__author">Александр Чуев</span>
-          <p class="instruction__text">Все магазинные стейки продаются в вакуумных упаковках по одному стейку, по два или кусками толщиной примерно в 2 хороших стейка...</p>
-          <ul class="category-list instruction__category-list">
-            <li class="">
-              <h4 class="category-list__heading">Категории:</h4></li>
-            <li class="category-list__name">Еда и напитки</li>
-            <li class="category-list__name">Кулинария</li>
-          </ul>
-          <table class="instruction__social instruction__separate-line">
-            <thead class="hidden">
-              <tr>
-                <th>Лайк</th>
-                <th>Дизлайк</th>
-                <th>Комментарии</th>
-                <th>Просмотры</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="c-landing-icon-sm c-landing-icon-like instruction__icon">123</td>
-                <td class="c-landing-icon-sm c-landing-icon-dislike instruction__icon">0</td>
-                <td class="c-landing-icon-sm c-landing-icon-comment instruction__icon">12</td>
-                <td class="c-landing-icon-sm c-landing-icon-visibility instruction__icon pull-right">1280</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+          <div class="main-info__instruction-wrapper col-xs-12 col-md-6 hidden-sm hidden-xs">
+            <div class="instruction main-info__instruction main-info__instruction--active replace">
+              <img src="./img/instruction-avatar-pizza.png" alt="Изображение рецепта" class="instruction__image" width="350" height="200">
+              <h3 class="instruction__heading">Готовим правильный стейк дома. Инструкция</h3>
+              <span class="instruction__author">Александр Чуев</span>
+              <p class="instruction__text">Все магазинные стейки продаются в вакуумных упаковках по одному стейку, по два или кусками толщиной примерно в 2 хороших стейка...</p>
+              <ul class="category-list instruction__category-list">
+                <li class="">
+                  <h4 class="category-list__heading">Категории:</h4>
+                </li>
+                <li class="category-list__name">Еда и напитки</li>
+                <li class="category-list__name">Кулинария</li>
+              </ul>
+              <table class="instruction__social instruction__separate-line">
+                <thead class="hidden">
+                  <tr>
+                    <th>Лайк</th>
+                    <th>Дизлайк</th>
+                    <th>Комментарии</th>
+                    <th>Просмотры</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="c-landing-icon-sm c-landing-icon-like instruction__icon">123</td>
+                    <td class="c-landing-icon-sm c-landing-icon-dislike instruction__icon">0</td>
+                    <td class="c-landing-icon-sm c-landing-icon-comment instruction__icon">12</td>
+                    <td class="c-landing-icon-sm c-landing-icon-visibility instruction__icon pull-right">1280</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="instruction main-info__instruction main-info__instruction--active replace instruction--backwards">
+              <img src="./img/instruction-avatar-pizza.png" alt="Изображение рецепта" class="instruction__image" width="350" height="200">
+              <h3 class="instruction__heading">Готовим правильный стейк дома. Инструкция</h3>
+              <span class="instruction__author">Александр Чуев</span>
+              <p class="instruction__text">Все магазинные стейки продаются в вакуумных упаковках по одному стейку, по два или кусками толщиной примерно в 2 хороших стейка...</p>
+              <ul class="category-list instruction__category-list">
+                <li class="">
+                  <h4 class="category-list__heading">Категории:</h4></li>
+                <li class="category-list__name">Еда и напитки</li>
+                <li class="category-list__name">Кулинария</li>
+              </ul>
+              <table class="instruction__social instruction__separate-line">
+                <thead class="hidden">
+                  <tr>
+                    <th>Лайк</th>
+                    <th>Дизлайк</th>
+                    <th>Комментарии</th>
+                    <th>Просмотры</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="c-landing-icon-sm c-landing-icon-like instruction__icon">123</td>
+                    <td class="c-landing-icon-sm c-landing-icon-dislike instruction__icon">0</td>
+                    <td class="c-landing-icon-sm c-landing-icon-comment instruction__icon">12</td>
+                    <td class="c-landing-icon-sm c-landing-icon-visibility instruction__icon pull-right">1280</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <section>
+    <section class="container">
       <h2 class="hidden">Преимущества</h2>
       <div class="cons row">
         <div class="cons__item col-md-6 col-lg-3">
@@ -149,189 +153,195 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2 class="hidden">Особенности</h2>
-      <ul class="features row">
-        <h2 class="c-landing__heading-2 features__heading col-xs-12">Возможности портала – залог вашего комфорта</h2>
-        <li class="features__item c-landing-icon-lg c-landing-icon-lg-search col-md-3 col-sm-6 col-xs-12 ">
-          <h3 class="features__item-heading">Поиск</h3>
-          <p class="c-landing__main-text features__item-text">позволит найти именно то, что вам необходимо в океане данных</p>
-        </li>
-        <li class="features__item c-landing-icon-lg c-landing-icon-lg-like col-md-3 col-sm-6 col-xs-12">
-          <h3 class="features__item-heading">Оценки</h3>
-          <p class="c-landing__main-text features__item-text">позволят выделить наилучшие работы наших мастеров</p>
-        </li>
-        <li class="features__item c-landing-icon-lg c-landing-icon-lg-write col-md-3 col-sm-6 col-xs-12">
-          <h3 class="features__item-heading">Подписка</h3>
-          <p class="c-landing__main-text features__item-text">позволит видеть нужные инструкции в первую очередь</p>
-        </li>
-        <li class="features__item c-landing-icon-lg c-landing-icon-lg-man col-md-3 col-sm-6 col-xs-12">
-          <h3 class="features__item-heading">Аккаунт</h3>
-          <p class="c-landing__main-text features__item-text">позволит получить больше возможностей сервиса</p>
-        </li>
+    <div class="features__bg">
+      <section class="container">
+        <h2 class="hidden">Особеености</h2>
+        <ul class="features row">
+          <h2 class="c-landing__heading-2 features__heading col-xs-12">Возможности портала – залог вашего комфорта</h2>
+          <li class="features__item c-landing-icon-lg c-landing-icon-lg-search col-md-3 col-sm-6 col-xs-12 ">
+            <h3 class="features__item-heading">Поиск</h3>
+            <p class="c-landing__main-text features__item-text">позволит найти именно то, что вам необходимо в океане данных</p>
+          </li>
+          <li class="features__item c-landing-icon-lg c-landing-icon-lg-like col-md-3 col-sm-6 col-xs-12">
+            <h3 class="features__item-heading">Оценки</h3>
+            <p class="c-landing__main-text features__item-text">позволят выделить наилучшие работы наших мастеров</p>
+          </li>
+          <li class="features__item c-landing-icon-lg c-landing-icon-lg-write col-md-3 col-sm-6 col-xs-12">
+            <h3 class="features__item-heading">Подписка</h3>
+            <p class="c-landing__main-text features__item-text">позволит видеть нужные инструкции в первую очередь</p>
+          </li>
+          <li class="features__item c-landing-icon-lg c-landing-icon-lg-man col-md-3 col-sm-6 col-xs-12">
+            <h3 class="features__item-heading">Аккаунт</h3>
+            <p class="c-landing__main-text features__item-text">позволит получить больше возможностей сервиса</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div id="agitation" class="agitation container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-12">
+          <div class="single-slider agitation-single-slider">
+            <ul class="single-slider__slides">
+              <li class="single-slider__item"><img src="img/aggitation-slider-slide1.png" alt="Девушки режут овощи" class="single-slider__image" width="432" height="480"></li>
+              <li class="single-slider__item"><img src="https://via.placeholder.com/426x474" alt="Девушки режут овощи" class="single-slider__image"></li>
+              <li class="single-slider__item"><img src="https://via.placeholder.com/426x474/00000" alt="Девушки режут овощи" class="single-slider__image"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 col-xs-12">
+          <h2 class="c-landing__heading-2 agitation__heading">Есть опыт? Поделитесь им!</h2>
+          <div class="agitation__block">
+            <p class="c-landing__main-text">Напишите и опубликуйте свою первую, но далеко не последнюю инструкцию на WikiRuki!</p>
+            <p class="c-landing__main-text"><span class="c-landing__main-bold-text">Регистрируйтесь!</span> И вы увидите, что наш портал затрагивает все возможные сферы деловой деятельности, домашнего быта и хобби современного человека.</p>
+            <a href="#" class="c-btn agitation__btn c-btn-with-icon c-landing-icon-sm c-icon-rock-hand">Поделиться опытом</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="staff__bg">
+      <div class="container">
+        <section id="staff" class="staff row">
+          <h2 class="c-landing__heading-2 staff__heading col-xs-12">Перед вами – лучшие мастера WikiRuki!</h2>
+          <p class="c-landing__main-text staff__paragraph col-xs-12">И каждый может быть в их числе!</p>
+          <div class="multi-slider staff__slider col-xs-12">
+            <ul class="multi-slider__slides row">
+              <li class="personal-card multi-slider__item">
+                <div class="personal-card__img-wrapper">
+                  <img class="personal-card__image" src="img/staff-block-photo-1.png" alt="" width="203" height="249"/>
+                  <ul class="personal-card__link-list social-links">
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
+                  </ul>
+                </div>
+                <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
+                </p>
+                <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
+              </li>
+              <li class="personal-card multi-slider__item">
+                <div class="personal-card__img-wrapper">
+                  <img class="personal-card__image" src="img/staff-block-photo-2.png" alt="" width="203" height="249"/>
+                  <ul class="personal-card__link-list social-links">
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
+                  </ul>
+                </div>
+                <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
+                </p>
+                <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
+              </li>
+              <li class="personal-card multi-slider__item">
+                <div class="personal-card__img-wrapper">
+                  <img class="personal-card__image" src="img/staff-block-photo-3.png" alt="" width="203" height="249"/>
+                  <ul class="personal-card__link-list social-links">
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
+                  </ul>
+                </div>
+                <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
+                </p>
+                <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
+              </li>
+              <li class="personal-card multi-slider__item">
+                <div class="personal-card__img-wrapper">
+                  <img class="personal-card__image" src="http://via.placeholder.com/203x249" alt="" width="203" height="249"/>
+                  <ul class="personal-card__link-list social-links">
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
+                  </ul>
+                </div>
+                <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
+                </p>
+                <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
+              </li>
+              <li class="personal-card multi-slider__item">
+                <div class="personal-card__img-wrapper">
+                  <img class="personal-card__image" src="http://via.placeholder.com/203x249/000000" alt="" width="203" height="249"/>
+                  <ul class="personal-card__link-list social-links">
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
+                  </ul>
+                </div>
+                <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
+                </p>
+                <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
+              </li>
+              <li class="personal-card multi-slider__item">
+                <div class="personal-card__img-wrapper">
+                  <img class="personal-card__image" src="http://via.placeholder.com/203x249/007d33" alt="" width="203" height="249"/>
+                  <ul class="personal-card__link-list social-links">
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
+                    <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
+                  </ul>
+                </div>
+                <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
+                </p>
+                <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="user-role__bg">
+      <div class="container">
+        <section id="user-role" class="user-role row">
+          <div class="col-xs-12">
+            <div class="user-role__block container-fluid">
+              <div class="row">
+                <h2 class="c-landing__heading-2 col-xs-12 user-role__heading">Определите свою роль в нашей дружественной команде</h2>
+              </div>
+              <div class="row">
+                <input id="user-block__tab-btn-apprentice" class="user-block__tab" type="radio" name="gender" value="apprentice" checked>
+                <input id="user-block__tab-btn-master" class="user-block__tab" type="radio" name="gender" value="master">
+                <div class="user-role__block-content col-sm-6 col-xs-12">
+                  <label for="user-block__tab-btn-apprentice">
+                    <h3 class="c-landing__heading-3 user-role__content-heading">Ученик</h3>
+                  </label>
+                  <div class="user-block__tab-wrapper">
+                    <ul class="user-role__list">
+                      <li class="user-role__item">Изучайте</li>
+                      <li class="user-role__item">Познавайте</li>
+                      <li class="user-role__item">Общайтесь</li>
+                      <li class="user-role__item">Исследуйте</li>
+                    </ul>
+                    <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-rock-hand">Получить знания</a>
+                  </div>
+                </div>
+                <div class="user-role__block-content col-sm-6 col-xs-12">
+                  <label for="user-block__tab-btn-master">
+                    <h3 class="c-landing__heading-3 user-role__content-heading">Мастер</h3>
+                  </label>
+                  <div class="user-block__tab-wrapper">
+                    <ul class="user-role__list">
+                      <li class="user-role__item">Создавайте</li>
+                      <li class="user-role__item">Лидируйте</li>
+                      <li class="user-role__item">Обучайте</li>
+                      <li class="user-role__item">Зарабатывайте</li>
+                    </ul>
+                    <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-pointer-hand">Стать мастером</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <section class="service-content container">
+      <h2 class="c-landing__heading-2 service-content__heading">Новые инструкции от наших опытных мастеров Ежедневно!</h2>
+      <ul class="category-list service-content__category-list">
+        <li>
+          <h4 class="category-list__heading">Категории:</h4></li>
+        <li class="category-list__name">Кулинария</li>
+        <li class="category-list__name">Еда и напитки</li>
       </ul>
-    </section>
-    <section id="agitation" class="agitation row">
-      <div class="col-lg-5 col-md-6 col-sm-12">
-        <div class="single-slider agitation-single-slider">
-          <ul class="single-slider__slides">
-            <li class="single-slider__item"><img src="img/aggitation-slider-slide1.png" alt="Девушки режут овощи" class="single-slider__image" width="432" height="480"></li>
-            <li class="single-slider__item"><img src="https://via.placeholder.com/426x474" alt="Девушки режут овощи" class="single-slider__image"></li>
-            <li class="single-slider__item"><img src="https://via.placeholder.com/426x474/00000" alt="Девушки режут овощи" class="single-slider__image"></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-7 col-md-6 col-xs-12">
-        <h2 class="c-landing__heading-2 agitation__heading">Есть опыт? Поделитесь им!</h2>
-        <div class="agitation__block">
-          <p class="c-landing__main-text">Напишите и опубликуйте свою первую, но далеко не последнюю инструкцию на WikiRuki!</p>
-          <p class="c-landing__main-text"><span class="c-landing__main-bold-text">Регистрируйтесь!</span> И вы увидите, что наш портал затрагивает все возможные сферы деловой деятельности, домашнего быта и хобби современного человека.</p>
-          <a href="#" class="c-btn agitation__btn c-btn-with-icon c-landing-icon-sm c-icon-rock-hand">Поделиться опытом</a>
-        </div>
-
-      </div>
-    </section>
-    <section id="staff" class="staff row">
-      <h2 class="c-landing__heading-2 staff__heading col-xs-12">Перед вами – лучшие мастера WikiRuki!</h2>
-      <p class="c-landing__main-text staff__paragraph col-xs-12">И каждый может быть в их числе!</p>
-      <div class="multi-slider staff__slider col-xs-12">
-        <ul class="multi-slider__slides row">
-          <li class="personal-card multi-slider__item">
-            <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="img/staff-block-photo-1.png" alt="" width="203" height="249"/>
-              <ul class="personal-card__link-list social-links">
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
-              </ul>
-            </div>
-            <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
-            </p>
-            <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
-          </li>
-          <li class="personal-card multi-slider__item">
-            <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="img/staff-block-photo-2.png" alt="" width="203" height="249"/>
-              <ul class="personal-card__link-list social-links">
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
-              </ul>
-            </div>
-            <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
-            </p>
-            <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
-          </li>
-          <li class="personal-card multi-slider__item">
-            <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="img/staff-block-photo-3.png" alt="" width="203" height="249"/>
-              <ul class="personal-card__link-list social-links">
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
-              </ul>
-            </div>
-            <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
-            </p>
-            <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
-          </li>
-          <li class="personal-card multi-slider__item">
-            <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="http://via.placeholder.com/203x249" alt="" width="203" height="249"/>
-              <ul class="personal-card__link-list social-links">
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
-              </ul>
-            </div>
-            <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
-            </p>
-            <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
-          </li>
-          <li class="personal-card multi-slider__item">
-            <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="http://via.placeholder.com/203x249/000000" alt="" width="203" height="249"/>
-              <ul class="personal-card__link-list social-links">
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
-              </ul>
-            </div>
-            <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
-            </p>
-            <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
-          </li>
-          <li class="personal-card multi-slider__item">
-            <div class="personal-card__img-wrapper">
-              <img class="personal-card__image" src="http://via.placeholder.com/203x249/007d33" alt="" width="203" height="249"/>
-              <ul class="personal-card__link-list social-links">
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-fb">item1</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ggl">item2</a></li>
-                <li><a href="#" class="personal-card__link social-links__item c-landing-icon-md c-icon-ytb">item3</a></li>
-              </ul>
-            </div>
-            <p class="name personal-card__name"><span class="personal-card__name-wrapper">Ophelia <span class="last-name">Barber</span></span>
-            </p>
-            <p class="personal-card__text c-landing__main-text">Cast iron cookware is an old fashioned form of cookware that still has a place in today's world of modern cooking. You will find all types of cast iron</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section id="user-role" class="user-role row">
-      <div class="col-xs-12">
-        <div class="user-role__block container-fluid">
-          <div class="row">
-            <h2 class="c-landing__heading-2 col-xs-12 user-role__heading">Определите свою роль в нашей дружественной команде</h2>
-          </div>
-          <div class="row">
-            <!-- btns used for tabbing this section on 767px -->
-            <input id="user-block__tab-btn-apprentice" class="user-block__tab" type="radio" name="gender" value="apprentice" checked>
-            <input id="user-block__tab-btn-master" class="user-block__tab" type="radio" name="gender" value="master">
-            <div class="user-role__block-content col-sm-6 col-xs-12">
-              <label for="user-block__tab-btn-apprentice">
-                <h3 class="c-landing__heading-3 user-role__content-heading">Ученик</h3>
-              </label>
-              <div class="user-block__tab-wrapper">
-                <ul class="user-role__list">
-                  <li class="user-role__item">Изучайте</li>
-                  <li class="user-role__item">Познавайте</li>
-                  <li class="user-role__item">Общайтесь</li>
-                  <li class="user-role__item">Исследуйте</li>
-                </ul>
-                <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-rock-hand">Получить знания</a>
-              </div>
-            </div>
-            <div class="user-role__block-content col-sm-6 col-xs-12">
-              <label for="user-block__tab-btn-master">
-                <h3 class="c-landing__heading-3 user-role__content-heading">Мастер</h3>
-              </label>
-              <div class="user-block__tab-wrapper">
-                <ul class="user-role__list">
-                  <li class="user-role__item">Создавайте</li>
-                  <li class="user-role__item">Лидируйте</li>
-                  <li class="user-role__item">Обучайте</li>
-                  <li class="user-role__item">Зарабатывайте</li>
-                </ul>
-                <a href="#" class="c-btn c-btn-with-icon user-role__btn c-landing-icon-sm c-icon-pointer-hand">Стать мастером</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="service-content row">
-      <div class="col-xs-12">
-        <h2 class="c-landing__heading-2 service-content__heading">Новые инструкции от наших опытных мастеров Ежедневно!</h2>
-      </div>
-      <div class="col-xs-12">
-        <ul class="category-list service-content__category-list">
-          <li>
-            <h4 class="category-list__heading">Категории:</h4></li>
-          <li class="category-list__name">Кулинария</li>
-          <li class="category-list__name">Еда и напитки</li>
-        </ul>
-      </div>
-      <div class="multi-slider service-content__slider col-xs-12">
+      <div class="multi-slider service-content__slider">
         <ul class="multi-slider__slides row">
           <li class="multi-slider__item">
             <section class="instruction">
@@ -426,159 +436,171 @@
         </ul>
       </div>
     </section>
-    <ul id="user-reviews" class="user-reviews row">
-      <h2 class="c-landing__heading-2 user-reviews__heading col-xs-12">О чем говорят мастера и ученики портала <span class="c-landing__text-logo">WikiRuki</span></h2>
-      <li class="review-card user-reviews__item col-xs-12">
-        <img src="img/comment-photo-1.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
-        <p class="name review-card__name">
-          Виктор <span class="last-name">Антонов</span>
-        </p>
-        <span class="review-card__user-rank">Шеф-повар</span>
-        <p class="c-landing__main-text review-card__review-text">
-          "Я много лет работаю в ресторанном бизнесе. И вот, наткнувшись на этот портал, решил открыть перед вами немало ловких приемов, которые позволят готовить изумительные шедевры на самой обычной кухне."
-        </p>
-      </li>
-      <li class="review-card user-reviews__item col-xs-12">
-        <img src="img/comment-photo-2.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
-        <p class="name review-card__name">
-          Дарья <span class="last-name">Игнатова</span>
-        </p>
-        <span class="review-card__user-rank">Фотограф</span>
-        <p class="c-landing__main-text review-card__review-text">
-          "Профессионально занимаюсь фотографией. И очень часто мне задают вопросы о том, как сделать тот или иной кадр, какие параметры съемки в той или иной ситуации лучше. Делюсь своими знаниями тут."
-        </p>
-      </li>
-      <li class="review-card user-reviews__item col-xs-12">
-        <img src="img/comment-photo-4.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
-        <p class="name review-card__name">
-          Павел <span class="last-name">Березовцев</span>
-        </p>
-        <span class="review-card__user-rank">Студент</span>
-        <p class="c-landing__main-text review-card__review-text">
-          "Благодаря здешним инструкциям научился из обычной курицы готовить невероятные блюда. Теперь, когда собираемся группой на пикник, все дружно просят приготовить куриные ножки."
-        </p>
-      </li>
-      <li class="review-card user-reviews__item col-xs-12">
-        <img src="img/comment-photo-3.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
-        <p class="name review-card__name">
-          Ирина <span class="last-name">Карташова</span>
-        </p>
-        <span class="review-card__user-rank">Дизайнер</span>
-        <p class="c-landing__main-text review-card__review-text">
-          "Начала изучать web дизайн. И на этом портале нашла для себя очень много полезного и интересного. Благодаря помощи мастеров уже беру первые заказы, результат выполнения которых нравится клиентам."
-        </p>
-      </li>
-    </ul>
-    <section class="gifts row">
-      <h2 class="c-landing__heading-2 gifts__heading col-xs-12">Получи подарки за инструкции</h2>
-      <div class="single-slider gifts__slider col-xs-12">
-        <ul class="gifts__list single-slider__slides">
-          <li class="gifts__gift-card single-slider__item">
-            <div class="gift-card">
-              <span class="gift-card__gift-anouncment-text">Подарок</span>
-              <p class="gift-card__terms">
-                <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
-                <!-- Pay attention: u have to resolve russion declension -->
-              </p>
-              <p class="gift-card__reward">
-                Получи в подарок <span class="gift-card__rewarding-item">футболку</span> с символикой wikiruki
-              </p>
-              <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
-            </div>
+    <div class="user-reviews__bg">
+      <div class="container">
+        <ul id="user-reviews" class="user-reviews row">
+          <h2 class="c-landing__heading-2 user-reviews__heading col-xs-12">О чем говорят мастера и ученики портала <span class="c-landing__text-logo">WikiRuki</span></h2>
+          <li class="review-card user-reviews__item col-xs-12">
+            <img src="img/comment-photo-1.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
+            <p class="name review-card__name">
+              Виктор <span class="last-name">Антонов</span>
+            </p>
+            <span class="review-card__user-rank">Шеф-повар</span>
+            <p class="c-landing__main-text review-card__review-text">
+              "Я много лет работаю в ресторанном бизнесе. И вот, наткнувшись на этот портал, решил открыть перед вами немало ловких приемов, которые позволят готовить изумительные шедевры на самой обычной кухне."
+            </p>
           </li>
-          <li class="gifts__gift-card single-slider__item single-slider__item--active">
-            <div class="gift-card">
-              <span class="gift-card__gift-anouncment-text">Подарок</span>
-              <p class="gift-card__terms">
-                <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">3</span><span class="gift-card__terms-text">инструкций</span>
-                <!-- Pay attention: u have to resolve russion declension -->
-              </p>
-              <p class="gift-card__reward">
-                Получи в подарок <span class="gift-card__rewarding-item">кружку</span> с символикой wikiruki
-              </p>
-              <a href="#" class="c-btn gift-card__btn">Опубликовать</a>
-            </div>
+          <li class="review-card user-reviews__item col-xs-12">
+            <img src="img/comment-photo-2.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
+            <p class="name review-card__name">
+              Дарья <span class="last-name">Игнатова</span>
+            </p>
+            <span class="review-card__user-rank">Фотограф</span>
+            <p class="c-landing__main-text review-card__review-text">
+              "Профессионально занимаюсь фотографией. И очень часто мне задают вопросы о том, как сделать тот или иной кадр, какие параметры съемки в той или иной ситуации лучше. Делюсь своими знаниями тут."
+            </p>
           </li>
-          <li class="gifts__gift-card single-slider__item">
-            <div class="gift-card">
-              <span class="gift-card__gift-anouncment-text">Подарок</span>
-              <p class="gift-card__terms">
-                <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">1</span><span class="gift-card__terms-text">инструкций</span>
-                <!-- Pay attention: u have to resolve russion declension -->
-              </p>
-              <p class="gift-card__reward">
-                Получи в подарок <span class="gift-card__rewarding-item">магнит</span> и значок с символикой wikiruki
-              </p>
-              <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
-            </div>
+          <li class="review-card user-reviews__item col-xs-12">
+            <img src="img/comment-photo-4.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
+            <p class="name review-card__name">
+              Павел <span class="last-name">Березовцев</span>
+            </p>
+            <span class="review-card__user-rank">Студент</span>
+            <p class="c-landing__main-text review-card__review-text">
+              "Благодаря здешним инструкциям научился из обычной курицы готовить невероятные блюда. Теперь, когда собираемся группой на пикник, все дружно просят приготовить куриные ножки."
+            </p>
+          </li>
+          <li class="review-card user-reviews__item col-xs-12">
+            <img src="img/comment-photo-3.png" alt="" class="review-card__user-avatar" width="80" height="80"/>
+            <p class="name review-card__name">
+              Ирина <span class="last-name">Карташова</span>
+            </p>
+            <span class="review-card__user-rank">Дизайнер</span>
+            <p class="c-landing__main-text review-card__review-text">
+              "Начала изучать web дизайн. И на этом портале нашла для себя очень много полезного и интересного. Благодаря помощи мастеров уже беру первые заказы, результат выполнения которых нравится клиентам."
+            </p>
           </li>
         </ul>
       </div>
-    </section>
-    <section id="tasks" class="tasks row">
-      <div class="tasks__block container-fluid">
-        <div class="row">
-          <h2 class="c-landing__heading-2 tasks__heading col-xs-12">
-                Создатели <span class="c-landing__text-logo">WikiRuki</span> ставят перед собой следующие задачи
-          </h2>
+    </div>
+    <div class="gifts__bg">
+      <section class="gifts container">
+        <h2 class="c-landing__heading-2 gifts__heading">Получи подарки за инструкции</h2>
+        <div class="single-slider gifts__slider">
+          <ul class="gifts__list single-slider__slides">
+            <li class="gifts__gift-card single-slider__item">
+              <div class="gift-card">
+                <span class="gift-card__gift-anouncment-text">Подарок</span>
+                <p class="gift-card__terms">
+                  <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">5</span><span class="gift-card__terms-text">инструкций</span>
+                  <!-- Pay attention: u have to resolve russion declension -->
+                </p>
+                <p class="gift-card__reward">
+                  Получи в подарок <span class="gift-card__rewarding-item">футболку</span> с символикой wikiruki
+                </p>
+                <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+              </div>
+            </li>
+            <li class="gifts__gift-card single-slider__item single-slider__item--active">
+              <div class="gift-card">
+                <span class="gift-card__gift-anouncment-text">Подарок</span>
+                <p class="gift-card__terms">
+                  <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">3</span><span class="gift-card__terms-text">инструкций</span>
+                  <!-- Pay attention: u have to resolve russion declension -->
+                </p>
+                <p class="gift-card__reward">
+                  Получи в подарок <span class="gift-card__rewarding-item">кружку</span> с символикой wikiruki
+                </p>
+                <a href="#" class="c-btn gift-card__btn">Опубликовать</a>
+              </div>
+            </li>
+            <li class="gifts__gift-card single-slider__item">
+              <div class="gift-card">
+                <span class="gift-card__gift-anouncment-text">Подарок</span>
+                <p class="gift-card__terms">
+                  <span class="gift-card__terms-text">за</span><span class="gift-card__terms-text gift-card__terms-requested-amount">1</span><span class="gift-card__terms-text">инструкций</span>
+                  <!-- Pay attention: u have to resolve russion declension -->
+                </p>
+                <p class="gift-card__reward">
+                  Получи в подарок <span class="gift-card__rewarding-item">магнит</span> и значок с символикой wikiruki
+                </p>
+                <a href="#" class="c-btn gift-card__btn c-empty-btn">Опубликовать</a>
+              </div>
+            </li>
+          </ul>
         </div>
-        <ol class="tasks__list row">
-          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Объединить и сплотить людей из разных уголков земного шара</li>
-          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Предоставить возможность профессионалам раскрыть свой потенциал</li>
-          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Дать шанс новичкам проявить свои амбиции, талант и добиться успеха</li>
-          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Превратить хобби в профессию, приносящую хороший доход</li>
-          <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Создать уникальную энциклопедию практических знаний</li>
-        </ol>
-        <div class="row">
-          <p class="c-landing__main-text tasks__paragraph col-xs-12">
-            Присоединяйтесь к команде <span class="c-landing__text-logo c-landing__main-bold-text">WikiRuki</span> уже сейчас
-          </p>
-          <div class="tasks__btn-wrapper col-xs-12">
-            <a href="#" class="c-btn c-btn-with-icon tasks__btn c-landing-icon-sm c-icon-rock-hand">Войти в портал</a>
+      </section>
+    </div>
+    <div class="tasks__bg">
+      <div class="container">
+        <div id="tasks" class="tasks row">
+          <div class="tasks__block container-fluid">
+            <div class="row">
+              <h2 class="c-landing__heading-2 tasks__heading col-xs-12">
+                    Создатели <span class="c-landing__text-logo">WikiRuki</span> ставят перед собой следующие задачи
+              </h2>
+            </div>
+            <ol class="tasks__list row">
+              <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Объединить и сплотить людей из разных уголков земного шара</li>
+              <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Предоставить возможность профессионалам раскрыть свой потенциал</li>
+              <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Дать шанс новичкам проявить свои амбиции, талант и добиться успеха</li>
+              <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Превратить хобби в профессию, приносящую хороший доход</li>
+              <li class="tasks__item c-landing__main-text col-lg-6 col-xs-12">Создать уникальную энциклопедию практических знаний</li>
+            </ol>
+            <div class="row">
+              <p class="c-landing__main-text tasks__paragraph col-xs-12">
+                Присоединяйтесь к команде <span class="c-landing__text-logo c-landing__main-bold-text">WikiRuki</span> уже сейчас
+              </p>
+              <div class="tasks__btn-wrapper col-xs-12">
+                <a href="#" class="c-btn c-btn-with-icon tasks__btn c-landing-icon-sm c-icon-rock-hand">Войти в портал</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
-  <footer id="contacts" class="footer c-landing__footer container">
-    <div class="row">
-      <section class="footer__info col-lg-5 col-xs-12">
-        <img src="img/logo-white.png" alt="Логотип Wikiruki: символика компании на синем фоне" class="logo footer__logo" width="194" height="35" />
-        <p class="footer__paragraph">
-          сообщество (кулинаров, программистов, механиков, садоводов, дизайнеров, предпринимателей, музыкантов, спортсменов, изобретателей…) таких как ты!
-        </p>
-      </section>
-      <section class="footer__info col-lg-4 col-xs-6">
-        <h2 class="footer__heading">Контакты</h2>
-        <address>
-            <p class="footer__paragraph">213 G Street Suite 34919 <br /> New York, NY, USA</p>
-            <table class="footer__contacts">
-              <tbody>
-                <tr>
-                  <th scope="col" rowspan="2">Phone:</th>
-                  <td>(01) 492910 3341</td>
-                </tr>
-                <tr>
-                  <td>(642) 492910 3341</td>
-                </tr>
-              </tbody>
-              <tbody>
-                <tr>
-                  <th>Mail:</th>
-                  <td>info@tempees.com</td>
-                </tr>
-              </tbody>
-            </table>
-          </address>
-      </section>
-      <section class="footer__info col-lg-3 col-xs-6">
-        <h2 class="footer__heading">Свяжитесь с нами</h2>
-        <ul class="social-links footer__social-links">
-          <li><a href="#" class="social-links__item c-landing-icon-xs c-icon-fb-xs">Facebook</a></li>
-          <li><a href="#" class="social-links__item c-landing-icon-xs c-icon-ggl-xs">Google+</a></li>
-          <li><a href="#" class="social-links__item c-landing-icon-xs c-icon-ytb-xs">YouTube</a></li>
-        </ul>
-      </section>
+  <footer class="footer__bg">
+    <div id="contacts" class="footer c-landing__footer container">
+      <div class="row">
+        <section class="footer__info col-lg-5 col-xs-12">
+          <img src="img/logo-white.png" alt="Логотип Wikiruki: символика компании на синем фоне" class="logo footer__logo" width="194" height="35" />
+          <p class="footer__paragraph">
+            сообщество (кулинаров, программистов, механиков, садоводов, дизайнеров, предпринимателей, музыкантов, спортсменов, изобретателей…) таких как ты!
+          </p>
+        </section>
+        <section class="footer__info col-lg-4 col-xs-6">
+          <h2 class="footer__heading">Контакты</h2>
+          <address>
+              <p class="footer__paragraph">213 G Street Suite 34919 <br /> New York, NY, USA</p>
+              <table class="footer__contacts">
+                <tbody>
+                  <tr>
+                    <th scope="col" rowspan="2">Phone:</th>
+                    <td>(01) 492910 3341</td>
+                  </tr>
+                  <tr>
+                    <td>(642) 492910 3341</td>
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th>Mail:</th>
+                    <td>info@tempees.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </address>
+        </section>
+        <section class="footer__info col-lg-3 col-xs-6">
+          <h2 class="footer__heading">Свяжитесь с нами</h2>
+          <ul class="social-links footer__social-links">
+            <li><a href="#" class="social-links__item c-landing-icon-xs c-icon-fb-xs">Facebook</a></li>
+            <li><a href="#" class="social-links__item c-landing-icon-xs c-icon-ggl-xs">Google+</a></li>
+            <li><a href="#" class="social-links__item c-landing-icon-xs c-icon-ytb-xs">YouTube</a></li>
+          </ul>
+        </section>
+      </div>
     </div>
   </footer>
 
