@@ -2663,20 +2663,8 @@ so to undo custom designing of centration comment icon section above */
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.footer__info:first-of-type::after {
-  right: 10px;
-}
-
-.footer__info:nth-of-type(2)::after {
-  right: 69px;
-}
-
-.footer__info:nth-child(2) {
+.footer__info:not(:first-of-type) {
   padding-left: 50px;
-}
-
-.footer__info:last-of-type {
-  margin-left: -24px;
 }
 
 .footer__heading {
